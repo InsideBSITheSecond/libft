@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llegrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,23 +12,3 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *restrict dst, const void *restrict src, size_t n)
-{
-	size_t	i;
-
-	if (src == dst || !n)
-		return (dst);
-
-	i = 0;
-	if (dst > src)
-		ft_memcpy(dst, src, n);
-	else
-	{
-		while (n > 0)
-		{
-			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
-			n--;
-		}
-	}
-	return (dst);
-}

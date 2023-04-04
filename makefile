@@ -1,5 +1,5 @@
 CC := cc
-CCARGS := -g -Wall -Werror -Wextra -g3 -fsanitize=address
+CCARGS := -g -c -Wall -Werror -Wextra -g3 -fsanitize=address
 
 AR := ar
 ARARGS := -crs
@@ -10,7 +10,7 @@ OBJS := $(SRCS:.c=.o)
 NAME := libft.a
 
 ${NAME}:
-	$(CC) $(CCARGS) -c $(SRCS) -I./
+	$(CC) $(CCARGS) $(SRCS) -I./
 	$(AR) $(ARARGS) $(NAME) $(OBJS)
 
 clean:

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llegrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,23 +12,18 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *restrict dst, const void *restrict src, size_t n)
+int	ft_atoi(char *str)
 {
-	size_t	i;
+	int	i;
+	int nbr;
+	int	sign;
 
-	if (src == dst || !n)
-		return (dst);
-
+	sign = 0;
 	i = 0;
-	if (dst > src)
-		ft_memcpy(dst, src, n);
-	else
+	nbr = 0;
+	/*while (str[i] != '\0')
 	{
-		while (n > 0)
-		{
-			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
-			n--;
-		}
-	}
-	return (dst);
+		if (str[i] == '\t' || str[i] == '\')
+	}*/
+	return (nbr * sign);
 }
