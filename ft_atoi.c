@@ -11,19 +11,36 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_atoi(char *str)
 {
-	int	i;
-	int nbr;
-	int	sign;
+	static int	nbr = 0;
+	static int	sign = 0;
 
-	sign = 0;
-	i = 0;
-	nbr = 0;
-	/*while (str[i] != '\0')
+	while (*str != '\0')
 	{
-		if (str[i] == '\t' || str[i] == '\')
-	}*/
-	return (nbr * sign);
+		while (ft_ismemberof(*str, (char []) \
+		{'\t', '\n', '\r', '\v', '\f', '\b', '0', ' '}, 8) && !nbr)
+			str++;
+		if ((*str == '-' || *str == '+') && (!sign && !nbr))
+		{
+			if (*str++ == '-')
+				sign = -1;
+			else
+				sign = 1;
+		}
+		if (ft_isdigit(*str))
+			nbr = nbr * 10 + (*str - '0');
+		else
+			break ;
+		str++;
+	}
+	if (sign != 0)
+		nbr *= sign;
+	return (nbr);
 }
+
+// int main(){
+// 	printf("%d", ft_atoi("\n\n\n  -46\b9 \n5d6"));
+// }

@@ -30,4 +30,8 @@ size_t	ft_strlcpy(char *restrict dst, \
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(char *str);
+
+int		ft_ismemberof(char c, char *list, int lim);
+int		ft_ialen(int *arr);
+int		ft_calen(char *arr);
 #endif
