@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/03 13:20:01 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/06 19:20:58 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ size_t	ft_strlcpy(char *restrict dst, \
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strchr(const char *s, int c);
 
 int		ft_ismemberof(char c, char *list, int lim);
 int		ft_ialen(int *arr);
