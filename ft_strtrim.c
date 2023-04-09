@@ -6,7 +6,7 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:43:53 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/09 14:36:42 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/09 20:14:15 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-// 		char s1[] = "lorem ipsum dolor sit amet";
-// 		ft_strtrim(s1, "tel");
-// }

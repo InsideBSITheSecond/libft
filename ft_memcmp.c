@@ -6,7 +6,7 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 15:44:31 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/09 14:25:38 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/09 20:13:13 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-//  {
-//   ft_memcmp("t\200", "t\0", 2);
-//   ft_memcmp("testss", "test", 5);
-//   ft_memcmp("", "test", 4);
-// 	ft_memcmp("test", "", 4);
-//  }

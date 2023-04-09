@@ -6,7 +6,7 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 13:30:30 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/09 20:12:33 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,3 @@ int	ft_atoi(char *str)
 		nbr *= sign;
 	return (nbr);
 }
-
-// int main(){
-// 	printf("%d", ft_atoi("\n\n\n  -46\b9 \n5d6"));
-// }
