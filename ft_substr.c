@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 13:47:53 by insidebsi        ###   ########.fr       */
+/*   Created: 2023/04/08 16:30:46 by insidebsi         #+#    #+#             */
+/*   Updated: 2023/04/09 14:08:21 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief  Fills the first [len] bytes of the memory area pointed to by [b] with the constant byte [c].
- * @param  void *b
- * @param  int *c
+ * @brief  Returns a substring from [s]. The substring begins at index [start] and is of maximum size [len].
+ * @note   Memory for the new string is obtained with malloc and can be freed with free
+ * @param  char *s
+ * @param  int start
  * @param  size_t len
- * @retval void*
+ * @retval char*
  */
-void	*ft_memset(void *b, int c, size_t len)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-
-	i = 0;
-	while (len > i)
-	{
-		((unsigned char *)b)[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
+  void *p;
+  
+  p = ft_calloc(sizeof(char), len + 1);
+  s += start;
+  ft_strlcpy(p, s, len + 1);
+  return (p);
 }

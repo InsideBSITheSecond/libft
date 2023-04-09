@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 13:51:26 by insidebsi        ###   ########.fr       */
+/*   Created: 2023/04/08 16:36:01 by insidebsi         #+#    #+#             */
+/*   Updated: 2023/04/09 13:53:40 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief  Return a pointer to a new string which is a duplicate of [s].
+ * @brief  Return a pointer to a new string which is the result of the concatenation of [s1] and [s2]
  * @note   Memory for the new string is obtained with malloc and can be freed with free
- * @param  char *c
+ * @param  char *s1
+ * @param  char *s2
  * @retval char*
  */
-char	*ft_strdup(const char *c)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-  void  *p;
-
-  p = ft_calloc(ft_strlen((char *)c) + 1, sizeof(char));
-  ft_strlcpy(p, c, ft_strlen((char *)c) + 1);
+  void *p;
+  size_t s;
+  
+  s = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 2;
+  p = ft_calloc(sizeof(char), s);
+  ft_strlcpy(p, s1, ft_strlen((char *)s1) + 1);
+  ft_strlcat(p, s2, s);
   return (p);
 }

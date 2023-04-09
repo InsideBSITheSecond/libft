@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:37:35 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/07 19:39:51 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/09 14:00:40 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,32 @@
 #include <unistd.h>
 #include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+
+/** 
+ * @brief  Appends the [src] string to the [dst] string, overwriting the [dst] terminator and adding one at the end of the result.
+ * @note   The strings may not overlap, and the [dst] string must have enough space for the result.
+ * @param  char *dst
+ * @param  char *src
+ * @param  size_t dstsize
+ * @retval size_t
+ */
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	l;
+	size_t i;
+	size_t l;
 	l = ft_strlen(dst) + ft_strlen((char *)src);
 	i = 0;
 
 	if (ft_strlen(dst) >= dstsize)
 		return (ft_strlen((char *)src) + dstsize);
-	while(*dst)
+	while (*dst)
 		dst++;
 
-	while((i < dstsize - (l - ft_strlen((char *)src)) - 1) && src[i])
+	while ((i < dstsize - (l - ft_strlen((char *)src)) - 1) && src[i])
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
 	return (l);
-}
-
-int		main()
-{
-	char	*dest;
-	size_t	s;
-
-	if (!(dest = (char *)malloc(sizeof(*dest) * 15)))
-		return (0);
-
-	
-	memset(dest, 0, 15);
-	memset(dest, 'r', 6);
-	memset(dest, 'r', 15);
-	s=ft_strlcat(dest, "lorem ipsum dolor sit amet", 6);
-	write(1, "\n", 1);
-	write(1, dest, 15);
-	return 0;
 }

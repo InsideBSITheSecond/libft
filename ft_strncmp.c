@@ -3,15 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 14:54:40 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/06 16:13:22 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/09 14:02:52 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** 
+ * @brief  Compares the first [n] bytes of the two strings [s1] and [s2].
+ * @param  char *s1
+ * @param  char *s2
+ * @param  size_t n
+ * @retval int
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 13:47:53 by insidebsi        ###   ########.fr       */
+/*   Created: 2023/04/08 16:10:08 by insidebsi         #+#    #+#             */
+/*   Updated: 2023/04/09 13:35:56 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief  Fills the first [len] bytes of the memory area pointed to by [b] with the constant byte [c].
- * @param  void *b
- * @param  int *c
- * @param  size_t len
+ * @brief  Allocates memory for an array of [nmemb] elements of [size] bytes each and returns a pointer to the allocated memory
+ * @param  size_t nmemb
+ * @param  size_t size
  * @retval void*
  */
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
+  void *p;
 
-	i = 0;
-	while (len > i)
-	{
-		((unsigned char *)b)[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
+  p = (void *)malloc(nmemb * size);
+  if (!p)
+    return (0);
+  ft_bzero(p, nmemb);
+  return (p);
 }

@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 13:47:53 by insidebsi        ###   ########.fr       */
+/*   Created: 2023/04/09 13:01:56 by insidebsi         #+#    #+#             */
+/*   Updated: 2023/04/09 13:48:53 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief  Fills the first [len] bytes of the memory area pointed to by [b] with the constant byte [c].
- * @param  void *b
- * @param  int *c
- * @param  size_t len
- * @retval void*
+ * @brief  Splits the string [s] into substrings defined by the [c] delimiter
+ * @param  char *s
+ * @param  char *c
+ * @retval char**
  */
-void	*ft_memset(void *b, int c, size_t len)
+char **ft_split(char const *s, char c)
 {
-	size_t	i;
+  int splitc;
+  
+  return (0);
+}
 
-	i = 0;
-	while (len > i)
-	{
-		((unsigned char *)b)[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
+int main()
+{
+  ft_split("JAN,FEB,MAR,APR,MAY,JUN,JUI,AUG,SEP,OCT,NOV,DEC", ',');
+  ft_atoi
 }

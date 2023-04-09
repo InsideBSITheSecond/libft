@@ -3,15 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/03 13:20:01 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/09 13:45:25 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** 
+ * @brief  Copies [n] bytes from memory area [src] to memory area [dest]. The memory areas must not overlap.  Use ft_memmove if the memory areas do overlap.
+ * @param  void *dst
+ * @param  void *src
+ * @param  size_t n
+ * @retval void*
+ */
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	size_t	i;

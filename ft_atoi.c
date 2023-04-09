@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/06 19:45:11 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/09 13:30:30 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** 
+ * @brief  I turn little char strings into integers
+ * @note   I'm leaving a note here
+ * @param  char *str
+ * @retval int
+ */
 int	ft_atoi(char *str)
 {
 	static int	nbr = 0;

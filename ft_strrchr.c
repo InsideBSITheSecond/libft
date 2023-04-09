@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:20:38 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/07 13:36:18 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/09 14:05:00 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** 
+ * @brief  Scan the string [s] for the last occurence of [c]
+ * @param  char *s
+ * @param  int *c
+ * @retval char*
+ */
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
