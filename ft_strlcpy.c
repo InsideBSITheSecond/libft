@@ -6,15 +6,17 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 14:00:32 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/09 14:28:14 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief  Copies the [src] string to the [dst] buffer, including the terminator.
- * @note   The strings may not overlap, and the [dst] string must have enough space to receive the copy.
+ * @brief  Copies the [src] string to the [dst] buffer, 
+ * including the terminator.
+ * @note   The strings may not overlap, and the [dst]
+ * string must have enough space to receive the copy.
  * @param  char *dst
  * @param  char *src
  * @param  size_t dstsize

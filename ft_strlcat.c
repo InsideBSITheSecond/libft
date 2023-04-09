@@ -6,36 +6,33 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:37:35 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 14:00:40 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/09 14:26:51 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-
 
 /** 
- * @brief  Appends the [src] string to the [dst] string, overwriting the [dst] terminator and adding one at the end of the result.
- * @note   The strings may not overlap, and the [dst] string must have enough space for the result.
+ * @brief  Appends the [src] string to the [dst] string, overwriting 
+ * the [dst] terminator and adding one at the end of the result.
+ * @note   The strings may not overlap, and the [dst] string
+ * must have enough space for the result.
  * @param  char *dst
  * @param  char *src
  * @param  size_t dstsize
  * @retval size_t
  */
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t l;
+	size_t	i;
+	size_t	l;
+
 	l = ft_strlen(dst) + ft_strlen((char *)src);
 	i = 0;
-
 	if (ft_strlen(dst) >= dstsize)
 		return (ft_strlen((char *)src) + dstsize);
 	while (*dst)
 		dst++;
-
 	while ((i < dstsize - (l - ft_strlen((char *)src)) - 1) && src[i])
 	{
 		dst[i] = src[i];

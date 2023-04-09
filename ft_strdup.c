@@ -6,23 +6,25 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 13:51:26 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/09 14:30:21 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief  Return a pointer to a new string which is a duplicate of [s].
- * @note   Memory for the new string is obtained with malloc and can be freed with free
+ * @brief  Return a pointer to a new string which
+ * is a duplicate of [s].
+ * @note   Memory for the new string is obtained 
+ * with malloc and can be freed with free
  * @param  char *c
  * @retval char*
  */
 char	*ft_strdup(const char *c)
 {
-  void  *p;
+	void	*p;
 
-  p = ft_calloc(ft_strlen((char *)c) + 1, sizeof(char));
-  ft_strlcpy(p, c, ft_strlen((char *)c) + 1);
-  return (p);
+	p = ft_calloc(ft_strlen((char *)c) + 1, sizeof(char));
+	ft_strlcpy(p, c, ft_strlen((char *)c) + 1);
+	return (p);
 }

@@ -13,7 +13,8 @@
 #include "libft.h"
 
 /** 
- * @brief  Calculates the length of the string pointed to by [str], excluding the terminator.
+ * @brief  Calculates the length of the string pointed 
+ * to by [str], excluding the terminator.
  * @param  char *str
  * @retval size_t
  */

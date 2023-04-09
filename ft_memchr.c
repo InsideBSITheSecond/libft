@@ -6,31 +6,32 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 15:28:35 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/09 13:41:21 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/09 14:29:14 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief  Scan the initial [n] bytes of the memory area pointed by [s] for the first instance of [c]
+ * @brief  Scan the initial [n] bytes of the memory area
+ * pointed by [s] for the first instance of [c]
  * @param void *s
  * @param int c
  * @param size_t n
  * @retval void*
  */
-void  *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-  size_t i;
+	size_t	i;
 
-  i = 0;
-  if (!s)
-    return (0);
-  while (i < n)
-  {
-    if (*(unsigned char *)(s + i) == (unsigned char)c)
-      return ((void *)(s + i));
-    i++;
-  }
-  return (0);
+	i = 0;
+	if (!s)
+		return (0);
+	while (i < n)
+	{
+		if (*(unsigned char *)(s + i) == (unsigned char)c)
+			return ((void *)(s + i));
+		i++;
+	}
+	return (0);
 }

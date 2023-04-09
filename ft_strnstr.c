@@ -6,14 +6,15 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:26:17 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 14:04:18 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/09 14:31:27 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief  Finds the first occurence of the substring [needle] in the first [n] bytes of the string [haystack]
+ * @brief  Finds the first occurence of the substring [needle]
+ * in the first [n] bytes of the string [haystack]
  * @param  char *haystack
  * @param  char *needle
  * @param  size_t len

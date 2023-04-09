@@ -6,7 +6,7 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 13:01:56 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/09 13:48:53 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/09 14:35:20 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
  * @param  char *c
  * @retval char**
  */
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-  int splitc;
-  
-  return (0);
+	int	splitc;
+
+	return (0);
 }
 
-int main()
+int	main(void)
 {
-  ft_split("JAN,FEB,MAR,APR,MAY,JUN,JUI,AUG,SEP,OCT,NOV,DEC", ',');
-  ft_atoi
+	ft_split("JAN,FEB,MAR,APR,MAY,JUN,JUI,AUG,SEP,OCT,NOV,DEC", ',');
+	return (0);
 }
