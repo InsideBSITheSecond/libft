@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:10:08 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/09 14:27:50 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/10 18:32:08 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	p = (void *)malloc(nmemb * size);
 	if (!p)
 		return (0);
-	ft_bzero(p, nmemb);
+	ft_bzero(p, nmemb * size);
 	return (p);
 }

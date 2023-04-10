@@ -3,14 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 20:12:33 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/10 18:08:48 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_ismemberof(char c, char *arr, int lookfor)
+{
+	int	i;
+
+	i = 0;
+	while (i < lookfor)
+	{
+		if (arr[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 /** 
  * @brief  I turn little char strings into integers
@@ -20,9 +34,11 @@
  */
 int	ft_atoi(char *str)
 {
-	static int	nbr = 0;
-	static int	sign = 0;
+	int	nbr;
+	int	sign;
 
+	nbr = 0;
+	sign = 0;
 	while (*str != '\0')
 	{
 		while (ft_ismemberof(*str, (char []) \
@@ -36,10 +52,9 @@ int	ft_atoi(char *str)
 				sign = 1;
 		}
 		if (ft_isdigit(*str))
-			nbr = nbr * 10 + (*str - '0');
+			nbr = nbr * 10 + (*str++ - '0');
 		else
 			break ;
-		str++;
 	}
 	if (sign != 0)
 		nbr *= sign;

@@ -1,0 +1,6 @@
+*.dSYM/*
+ft_strnstr
+ft_split.c.old
+ft_strlcat
+ft_atoi
+ft_calloc

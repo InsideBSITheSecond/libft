@@ -3,14 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:43:53 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/09 20:14:15 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/10 15:13:17 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_ismemberof(char c, char *arr, int lookfor)
+{
+	int	i;
+
+	i = 0;
+	while (i < lookfor)
+	{
+		if (arr[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 /** 
  * @brief  Returns a copy of [s1] with the characters specified in [set]

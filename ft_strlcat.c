@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:37:35 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 14:26:51 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/10 16:52:59 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	l;
 
 	l = ft_strlen(dst) + ft_strlen((char *)src);
+	if (dstsize == 0)
+		return (ft_strlen((char *)src));
 	i = 0;
 	if (ft_strlen(dst) >= dstsize)
 		return (ft_strlen((char *)src) + dstsize);

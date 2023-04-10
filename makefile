@@ -1,5 +1,5 @@
 CC := cc
-CCARGS := -g -c -Wall -Werror -Wextra -g3 -fsanitize=address
+CCARGS := -c -Wall -Werror -Wextra
 
 AR := ar
 ARARGS := -crs
@@ -26,3 +26,7 @@ re:	fclean all
 print:
 	echo $(SRCS)
 	echo $(OBJS)
+
+test:
+	gcc ${SRCS} -g -o a.out
+	./a.out ${arg}
