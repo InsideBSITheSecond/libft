@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:36:01 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/09 14:24:04 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/11 15:01:19 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	s = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 2;
 	p = ft_calloc(sizeof(char), s);
+	if (!p)
+		return (0);
 	ft_strlcpy(p, s1, ft_strlen((char *)s1) + 1);
 	ft_strlcat(p, s2, s);
 	return (p);

@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:43:53 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/10 15:13:17 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/11 15:15:12 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	start = 0;
 	end = ft_strlen((char *)s1);
+	if (!s1 || !set)
+		return (0);
 	while (s1[start] && ft_ismemberof(s1[start], \
 		(char *)set, ft_strlen((char *)set)))
 		start++;
@@ -52,6 +54,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		(char *)set, ft_strlen((char *)set)))
 		end--;
 	str = ft_calloc(end - start + 1, sizeof(char));
+	if (!str)
+		return (0);
 	while (start < end)
 		str[i++] = s1[start++];
 	str[i] = '\0';

@@ -12,6 +12,9 @@
 		"ft_strlcpy.c",
 		"ft_strlen.c",
 		"ft_bzero.c",
+		"ft_strlcat.c",
+		"ft_strchr.c",
+		"ft_substr.c",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}"
       ],

@@ -6,12 +6,15 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/10 15:12:53 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/11 19:38:24 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define EXIT return
+# define TEST_SUCCESS 0
+# define TEST_FAILED 1
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -19,7 +22,8 @@ typedef struct s_split_chunk
 {
 	size_t	start;
 	size_t	end;
-	size_t	offset;
+	char	*word;
+	char	*remains;
 }								t_split_chunk;
 
 int		ft_isalpha(int c);

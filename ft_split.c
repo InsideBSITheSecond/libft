@@ -11,75 +11,51 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include "../libft-testers/libft-unit-test/include/libft_test.h"
+// #include "../libft-testers/libft-unit-test/src/test_functions.c"
 
-/**
- * @brief  Calculate the final count of splits we'll have
- * @param  char *s
- * @param  char c
- * @retval size_t
- */
-static size_t ft_split_getnbr(char const *s, char c)
+size_t	ft_sizeoracle(char *str, char del)
 {
-	size_t splitc;
-	size_t i;
+	size_t	i;
+	int		trig;
 
-	splitc = 0;
 	i = 0;
-	while (s[i])
+	trig = 0;
+	while (*str)
 	{
-		if (s[i] == c)
-			splitc++;
-		i++;
+		//if (*str != del && trig) 
+			//i++;
+		if (*str != del && !trig)
+		{
+			i++;
+			trig = 1;
+		}
+		str++;
+		if (*str == del && trig)
+			trig = 0;
 	}
-	return (splitc);
+	return (i);
 }
 
-/**
- * @brief  Allocate and zero the memory to store the split
- * @param  char *s
- * @param  char c
- * @retval char**
- */
-static char **ft_split_alloc(char const *s, char c, size_t fcount)
+char	*ft_getnextword(t_split_chunk chunk, char del)
 {
-	(void)s;
-	(void)c;
-	(void)fcount;
-	char **str;
-
-	str = (char **)ft_calloc(500, sizeof(char));
-	return (str);
-}
-
-/**
- * @brief  Do the actual splitting job
- * @param  char *s
- * @param  char *c
- * @retval char**
- */
-static void ft_split_splitter(char **split, const char *s, char c, size_t fcount)
-{
-	size_t i;
-	size_t count;
-	t_split_chunk chunk;
-
-	i = 0;
-	count = 0;
 	chunk.start = 0;
 	chunk.end = 0;
-	chunk.offset = 0;
-	while (fcount >= count)
-	{
-		if (s[i] == c)
-		{
-			chunk.start = chunk.end;
-			chunk.end = i;
-			split[count] = ft_substr(s, chunk.start + chunk.offset, chunk.end - chunk.start - chunk.offset);
-			count++;
-			chunk.offset = 1;
-		}
-		i++;
-	}
+	chunk.end = chunk.start;
+	while ((char)chunk.remains[chunk.end] != del && chunk.remains[chunk.end])
+		chunk.end++;
+	chunk.word = ft_substr(chunk.remains, chunk.start, chunk.end - chunk.start);
+	chunk.remains += chunk.end;
+	return (chunk.word);
+}
+
+void	ft_unalloc(char **split)
+{
+	int	i;
+
+	i = 0;
+	while (split[i])
+		free(split[i]);
 }
 
 /**
@@ -88,13 +64,38 @@ static void ft_split_splitter(char **split, const char *s, char c, size_t fcount
  * @param  char *c
  * @retval char**
  */
-char **ft_split(char const *s, char c)
+char	**ft_split(const char *str, char del)
 {
-	char **str;
-	size_t fcount;
+	char			**split;
+	int				i;
+	t_split_chunk	chunk;
 
-	fcount = ft_split_getnbr(s, c);
-	str = ft_split_alloc(s, c, fcount);
-	ft_split_splitter(str, s, c, fcount);
-	return (str);
+	i = 0;
+	chunk.remains = (char *)str;
+	split = ft_calloc(ft_sizeoracle(chunk.remains, del) + 1, sizeof(char *));
+	if (!split)
+	{
+		ft_unalloc(split);
+		return (0);
+	}
+	while (chunk.remains[0] != '\0')
+	{
+		while (chunk.remains[0] == del)
+			chunk.remains++;
+		chunk.word = ft_getnextword(chunk, del);
+		chunk.remains += ft_strlen(chunk.word);
+		if (chunk.word[0] != '\0')
+			split[i++] = chunk.word;
+	}
+	return (split);
+}
+
+int main()
+{
+	char *s = "      split       this for   me  !       ";
+
+	char **result = ft_split(s, ' ');
+	if (!result)
+		exit(TEST_SUCCESS);
+	exit(TEST_FAILED);
 }
