@@ -2,29 +2,34 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2023/04/09 13:01:56 by insidebsi         #+#    #+#             */
 /*   Updated: 2023/04/09 20:10:14 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+
 // #include "../libft-testers/libft-unit-test/include/libft_test.h"
 // #include "../libft-testers/libft-unit-test/src/test_functions.c"
 
 size_t	ft_sizeoracle(char *str, char del)
 {
-	size_t	i;
-	int		trig;
+	size_t i;
+	int trig;
 
 	i = 0;
 	trig = 0;
 	while (*str)
 	{
-		//if (*str != del && trig) 
-			//i++;
+		//if (*str != del && trig)
+		//i++;
 		if (*str != del && !trig)
 		{
 			i++;
@@ -44,14 +49,15 @@ char	*ft_getnextword(t_split_chunk chunk, char del)
 	chunk.end = chunk.start;
 	while ((char)chunk.remains[chunk.end] != del && chunk.remains[chunk.end])
 		chunk.end++;
-	chunk.word = ft_substr(chunk.remains, chunk.start, chunk.end - chunk.start);
+	chunk.word = ft_substr(chunk.remains, chunk.start, chunk.end
+			- chunk.start);
 	chunk.remains += chunk.end;
 	return (chunk.word);
 }
 
 void	ft_unalloc(char **split)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (split[i])
@@ -66,9 +72,9 @@ void	ft_unalloc(char **split)
  */
 char	**ft_split(const char *str, char del)
 {
-	char			**split;
-	int				i;
-	t_split_chunk	chunk;
+	char **split;
+	int i;
+	t_split_chunk chunk;
 
 	i = 0;
 	chunk.remains = (char *)str;
@@ -90,12 +96,22 @@ char	**ft_split(const char *str, char del)
 	return (split);
 }
 
-int main()
-{
-	char *s = "      split       this for   me  !       ";
+// int main()
+// {
+// 	char *s = "      split       this for   me  !       ";
 
-	char **result = ft_split(s, ' ');
-	if (!result)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-}
+// 	char **result = ft_split(s, ' ');
+// 	if (!result)
+// 		exit(TEST_SUCCESS);
+// 	exit(TEST_FAILED);
+// }
+
+// int	main(void)
+// {
+// 	char *s = "      split       this for   me  !       ";
+
+// 	char **result = ft_split(s, ' ');
+// 	if (!result)
+// 		exit(TEST_SUCCESS);
+// 	exit(TEST_FAILED);
+// }
