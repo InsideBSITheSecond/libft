@@ -15,14 +15,13 @@
 
 #include "libft.h"
 
-
 // #include "../libft-testers/libft-unit-test/include/libft_test.h"
 // #include "../libft-testers/libft-unit-test/src/test_functions.c"
 
 size_t	ft_sizeoracle(char *str, char del)
 {
-	size_t i;
-	int trig;
+	size_t	i;
+	int		trig;
 
 	i = 0;
 	trig = 0;
@@ -57,7 +56,7 @@ char	*ft_getnextword(t_split_chunk chunk, char del)
 
 void	ft_unalloc(char **split)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (split[i])
@@ -72,9 +71,9 @@ void	ft_unalloc(char **split)
  */
 char	**ft_split(const char *str, char del)
 {
-	char **split;
-	int i;
-	t_split_chunk chunk;
+	char			**split;
+	int				i;
+	t_split_chunk	chunk;
 
 	i = 0;
 	chunk.remains = (char *)str;
