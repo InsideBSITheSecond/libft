@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/10 18:08:48 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/14 19:07:25 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	ft_ismemberof(char c, char *arr, int lookfor)
  * @param  char *str
  * @retval int
  */
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	nbr;
 	int	sign;

@@ -9,7 +9,7 @@ OBJS := $(SRCS:.c=.o)
 
 NAME := libft.a
 
-${NAME}:
+${NAME}: $(OBJS)
 	$(CC) $(CCARGS) $(SRCS) -I./
 	$(AR) $(ARARGS) $(NAME) $(OBJS)
 
