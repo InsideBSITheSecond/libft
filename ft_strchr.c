@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 19:21:38 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 13:49:31 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/18 19:36:31 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,18 @@
  */
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	char	*ptr;
+
+	if (!s)
+		return (0);
+	ptr = (char *)s;
+	while (*ptr)
 	{
-		if ((char)s[0] == (char)c)
-			return ((char *)s);
-		s++;
+		if (*ptr == (char)c)
+			return (ptr);
+		ptr++;
 	}
-	if (c == '\0')
-		return ((char *)s);
+	if (*ptr == (char)c)
+		return (ptr);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 11:32:59 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 13:37:05 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/04/18 19:42:50 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
  */
 int	ft_isalnum(int c)
 {
+	if (!c)
+		return (0);
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);

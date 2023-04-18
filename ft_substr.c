@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:30:46 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/11 18:27:13 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/18 20:23:55 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	void	*p;
 
+	if (!s || !len)
+		return (0);
 	if (start >= ft_strlen((char *)s))
 		len = 0;
 	p = ft_calloc(sizeof(char), len + 1);

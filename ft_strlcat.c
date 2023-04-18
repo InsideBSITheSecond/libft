@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:37:35 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/11 16:00:43 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/18 20:12:02 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	l = ft_strlen(dst) + ft_strlen((char *)src);
 	if (dstsize == 0)
 		return (ft_strlen((char *)src));
-	i = 0;
 	if (ft_strlen(dst) >= dstsize)
 		return (ft_strlen((char *)src) + dstsize);
+	i = 0;
 	while (*dst)
 		dst++;
 	while ((i < dstsize - (l - ft_strlen((char *)src)) - 1) && src[i])

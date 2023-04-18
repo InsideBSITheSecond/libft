@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:26:17 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/10 18:09:38 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/18 20:14:50 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!haystack || !needle)
+		return (0);
 	i = 0;
 	j = 0;
 	if (needle[i] == '\0')

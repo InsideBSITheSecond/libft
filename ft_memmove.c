@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/14 19:01:32 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/18 19:54:19 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  */
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	if (src == dst || !n)
+	if (src == dst || !n || !src || !dst)
 		return (dst);
 	if (dst < src)
 		ft_memcpy(dst, src, n);

@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:43:53 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/11 15:15:12 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/18 20:32:36 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	i;
 
+	if (!s1 || !set)
+		return (0);
 	i = 0;
 	start = 0;
 	end = ft_strlen((char *)s1);
