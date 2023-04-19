@@ -8,6 +8,10 @@
 				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
+				"ft_strlcpy.c",
+				"ft_strlen.c",
+				"ft_calloc.c",
+				"ft_bzero.c",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}"
 			],

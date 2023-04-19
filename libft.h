@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/14 19:07:45 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/19 17:36:01 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # define TEST_FAILED 1
 # include <stdlib.h>
 # include <unistd.h>
+#include <limits.h>
 
 typedef struct s_list
 {
