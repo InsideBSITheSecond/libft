@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:36:01 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/11 15:01:19 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/20 16:34:55 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	void	*p;
 	size_t	s;
 
-	s = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 2;
+	s = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
 	p = ft_calloc(sizeof(char), s);
 	if (!p)
 		return (0);

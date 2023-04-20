@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:30:46 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/19 17:42:00 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/20 16:24:11 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*p;
 
- 	if (!s)
+	if (!s)
 		return (0);
 	if (start > ft_strlen((char *)s))
-		len = 0;
-	p = ft_calloc(sizeof(char), (len + 1));
+		return (ft_strdup(""));
+	if (start + len > ft_strlen(s))
+		len = ft_strlen(s) - start;
+	p = (char *)ft_calloc(sizeof(char), (len + 1));
 	if (!p)
 		return (0);
 	s += start;
-	ft_strlcpy(p, s, len + 1);
+	if (s)
+		ft_strlcpy(p, s, len + 1);
 	return (p);
 }
 
 // int	main(void)
 // {
-// 	ft_substr("", 1, 1);
+// 	ft_substr("hola", 0, -1);
 // }

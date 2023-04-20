@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2023/04/14 15:32:28 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/14 15:32:28 by llegrand         ###   ########.fr       */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/20 18:28:09 by llegrand          #+#    #+#             */
+/*   Updated: 2023/04/20 18:28:09 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int		i;
-	t_list	nl;
+	t_list	*nl;
 
-	i = 1;
-	if (!lst)
-		return (0);
-	if (lst->next)
+	if ((*lst)->next)
 	{
-		nl = *lst->next;
-		while (nl.next)
-		{
-			nl = *nl.next;
-			i++;
-		}
-		return (i + 1);
+		nl = (*lst)->next;
+		ft_lstclear(&nl, del);
 	}
-	else
-		return (i);
+	del(*lst);
+	free(*lst);
+	return ;
 }
 
 // int	main(void)
@@ -45,5 +34,5 @@ int	ft_lstsize(t_list *lst)
 // 	ft_lstadd_back(&list, ft_lstnew("nyaaa"));
 // 	ft_lstadd_back(&list, ft_lstnew("yamete"));
 // 	ft_lstadd_back(&list, ft_lstnew("kudasai"));
-// 	ft_lstsize(list);
+// 	ft_lstclear(&list, &ft_lstdelone);
 // }

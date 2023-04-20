@@ -6,11 +6,12 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/18 20:17:55 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/20 18:22:03 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 // static int	ft_ismemberof(char c, char *arr, int lookfor)
 // {
@@ -56,3 +57,7 @@ int	ft_atoi(const char *str)
 	}
 	return (nbr * sign);
 }
+// int main()
+// {
+// 	ft_atoi("+0000000000000000000000000000000000000000000000000000123");
+// }

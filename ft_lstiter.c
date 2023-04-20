@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 15:45:15 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/14 15:45:15 by llegrand         ###   ########.fr       */
+/*   Created: 2023/04/20 18:28:10 by llegrand          #+#    #+#             */
+/*   Updated: 2023/04/20 18:28:10 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void*))
 {
-	t_list	*nl;
-
-	if (!lst)
-		return (0);
-	if (lst->next)
-	{
-		nl = lst->next;
-		while (nl->next)
-			nl = nl->next;
-		return (nl);
-	}
-	else
-		return (lst);
+	(void)lst;
+	(void)f;
+	return ;
 }

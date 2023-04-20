@@ -6,11 +6,12 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:26:17 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/18 20:14:50 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/20 15:18:34 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 /** 
  * @brief  Finds the first occurence of the substring [needle]
@@ -38,7 +39,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		while (i + j < len && haystack[i] && needle[j])
 		{
 			j = 0;
-			while (i + j < len && haystack[i + j] == needle[j])
+			while (i + j < len && haystack[i + j] == needle[j] && needle[j])
 				j++;
 			if (j == (size_t)ft_strlen((char *)needle))
 				return ((char *)haystack + i);
@@ -48,3 +49,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
+// int main()
+// {
+// 	char *s1;
+// 	char *s2;
+
+// 	s1 = ft_strnstr("aaxx", "xx", 5);
+// 	s2 = strnstr("aaxx", "xx", 5);
+// 	s1 = ft_strnstr("aaxx", "xx", 6);
+// 	s2 = strnstr("aaxx", "xx", 6);
+// }

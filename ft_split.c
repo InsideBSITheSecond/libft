@@ -44,7 +44,7 @@ char	**ft_split(const char *s, char c)
 	if (!s)
 		return (0);
 	i = 0;
-	split = ft_calloc(sizeof(char *), (ft_sizeoracle(s, c) + 1));
+	split = (char **)ft_calloc(sizeof(char *), (ft_sizeoracle(s, c) + 1));
 	if (!split)
 		return (0);
 	while (*s)
@@ -62,3 +62,8 @@ char	**ft_split(const char *s, char c)
 	split[i] = 0;
 	return (split);
 }
+
+// int main()
+// {
+// 	ft_split("uwu owo", ' ');
+// }

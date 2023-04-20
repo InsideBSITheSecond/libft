@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 15:45:15 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/14 15:45:15 by llegrand         ###   ########.fr       */
+/*   Created: 2023/04/20 18:28:11 by llegrand          #+#    #+#             */
+/*   Updated: 2023/04/20 18:28:11 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
 {
-	t_list	*nl;
-
-	if (!lst)
-		return (0);
-	if (lst->next)
-	{
-		nl = lst->next;
-		while (nl->next)
-			nl = nl->next;
-		return (nl);
-	}
-	else
-		return (lst);
+	(void)lst;
+	(void)f;
+	(void)del;
+	return (ft_lstnew("uwu"));
 }
