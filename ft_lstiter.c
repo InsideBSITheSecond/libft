@@ -14,7 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void*))
 {
-	(void)lst;
-	(void)f;
-	return ;
+	if (!lst || !f)
+		return ;
+	f(lst->content);
+	if (lst->next)
+		ft_lstiter(lst->next, f);
 }

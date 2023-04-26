@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+
-	+:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+
-	+#+        */
-/*                                                +#+#+#+#+#+
-	+#+           */
-/*   Created: 2023/04/09 13:01:56 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/09 20:10:14 by insidebsi        ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/24 15:29:06 by llegrand          #+#    #+#             */
+/*   Updated: 2023/04/24 15:29:06 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +59,3 @@ char	**ft_split(const char *s, char c)
 	split[i] = 0;
 	return (split);
 }
-
-// int main()
-// {
-// 	ft_split("uwu owo", ' ');
-// }

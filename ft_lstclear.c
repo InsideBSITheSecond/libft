@@ -14,25 +14,18 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*nl;
+	t_list	*nlstp;
+	t_list	*tmplst;
 
-	if ((*lst)->next)
+	if (!del || !lst || !*lst)
+		return ;
+	tmplst = 0;
+	nlstp = *lst;
+	while (nlstp)
 	{
-		nl = (*lst)->next;
-		ft_lstclear(&nl, del);
+		tmplst = nlstp->next;
+		ft_lstdelone(nlstp, del);
+		nlstp = tmplst;
 	}
-	del(*lst);
-	free(*lst);
-	return ;
+	*lst = 0;
 }
-
-// int	main(void)
-// {
-// 	t_list *list = ft_lstnew("uwu");
-// 	ft_lstadd_back(&list, ft_lstnew("owo"));
-// 	ft_lstadd_back(&list, ft_lstnew("senpai"));
-// 	ft_lstadd_back(&list, ft_lstnew("nyaaa"));
-// 	ft_lstadd_back(&list, ft_lstnew("yamete"));
-// 	ft_lstadd_back(&list, ft_lstnew("kudasai"));
-// 	ft_lstclear(&list, &ft_lstdelone);
-// }
