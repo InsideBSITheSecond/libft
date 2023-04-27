@@ -17,6 +17,12 @@
 #include <fcntl.h>
 #include <stdio.h>
 
+/** 
+ * @brief  Write the [n] number into [fd] file descriptor
+ * @param  int n
+ * @param  int fd
+ * @retval void
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)

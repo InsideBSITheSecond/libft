@@ -13,6 +13,11 @@
 #include "libft.h"
 #include <string.h>
 
+/** 
+ * @brief  Helper function for ft_itoa to know the length of the given integer
+ * @param  int n
+ * @retval int
+ */
 static int	ft_ilen(int n)
 {
 	int				i;
@@ -33,6 +38,11 @@ static int	ft_ilen(int n)
 	return (i);
 }
 
+/** 
+ * @brief  Convert an integer into a char*
+ * @param  int nbr
+ * @retval char* str
+ */
 char	*ft_itoa(int nbr)
 {
 	int				i;

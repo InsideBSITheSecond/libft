@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/** 
+ * @brief  Create a new chained list with whatever passed content
+ * @param  void *content
+ * @retval t_list*
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*head;

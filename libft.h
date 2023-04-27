@@ -6,15 +6,12 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/24 15:52:30 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:51:41 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define EXIT return
-# define TEST_SUCCESS 0
-# define TEST_FAILED 1
 # include <stdlib.h>
 # include <unistd.h>
 

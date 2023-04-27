@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/** 
+ * @brief  Delete and free a chained list node
+ * @param  t_list *lst
+ * @param  void *del
+ * @retval void
+ */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)

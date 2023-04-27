@@ -13,6 +13,12 @@
 #include "libft.h"
 #include <stdio.h>
 
+/** 
+ * @brief  The oracle will predict the size needed to old the split string
+ * @param  char *s
+ * @param  char c
+ * @retval size_t
+ */
 static size_t	ft_sizeoracle(const char *s, char c)
 {
 	size_t	size;
@@ -32,6 +38,26 @@ static size_t	ft_sizeoracle(const char *s, char c)
 	return (size);
 }
 
+/** 
+ * @brief Helper function to free allocated memory
+ * @note  I only exist because my caller is too long >_<
+ * @param  char **split
+ * @retval int*
+ */
+static char	**ft_splitfree(char **split)
+{
+	free(split);
+	return (0);
+}
+
+/** 
+ * @brief  Splits the [s] string using the [c] character delimiter
+ * @note   Memory for the new string is obtained 
+ * with malloc and can be freed with free
+ * @param  char *s
+ * @param  char c
+ * @retval char**
+ */
 char	**ft_split(const char *s, char c)
 {
 	char	**split;
@@ -43,7 +69,7 @@ char	**ft_split(const char *s, char c)
 	i = 0;
 	split = (char **)ft_calloc(sizeof(char *), (ft_sizeoracle(s, c) + 1));
 	if (!split)
-		return (0);
+		return (ft_splitfree(split));
 	while (*s)
 	{
 		if (*s != c)

@@ -15,6 +15,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief  Iterate over the [s] string and pass each characters to the [f] 
+ * * function
+ * @param  char *s
+ * @param  void *f
+ * @retval void
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;

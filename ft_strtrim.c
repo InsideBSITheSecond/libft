@@ -6,12 +6,18 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:43:53 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/18 20:32:36 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:50:32 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** 
+ * @brief  Helper function that tells if the character [c] is present in [arr]
+ * @param  char c
+ * @param  char *arr
+ * @retval int
+ */
 static int	ft_ismemberof(char c, char *arr, int lookfor)
 {
 	int	i;

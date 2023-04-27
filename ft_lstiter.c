@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/** 
+ * @brief  Iterate over [lst] and applies the given function [f] on each node
+ * @param  t_list *lst
+ * @param  void *f
+ * @retval void
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void*))
 {
 	if (!lst || !f)

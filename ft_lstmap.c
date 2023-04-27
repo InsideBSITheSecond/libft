@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/** 
+ * @brief  Create and return a new list created by passing each nodes from [lst]
+ * *  in the given function [f] and deleting it with [del] in case of error.
+ * @param  t_list *lst
+ * @param  void *f
+ * @param  void *del
+ * @retval t_list*
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
 {
 	t_list	*nl;

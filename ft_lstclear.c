@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/** 
+ * @brief  Delete and free the [lst] chained list using the given [del] function
+ * @param  t_list **lst
+ * @param  void *del
+ * @retval void
+ */
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*nlstp;

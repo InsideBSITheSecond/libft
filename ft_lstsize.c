@@ -15,6 +15,11 @@
 
 #include "libft.h"
 
+/** 
+ * @brief  Return the size of given [lst] chained list
+ * @param  t_list *lst
+ * @retval int
+ */
 int	ft_lstsize(t_list *lst)
 {
 	int		i;

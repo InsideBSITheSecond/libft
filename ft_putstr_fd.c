@@ -15,6 +15,12 @@
 
 #include "libft.h"
 
+/** 
+ * @brief  Write the [s] string into [fd] file descriptor
+ * @param  char *s
+ * @param  int fd
+ * @retval void
+ */
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;

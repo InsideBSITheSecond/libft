@@ -6,14 +6,14 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/18 19:39:12 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:16:04 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief  Erase data in n bytes of memory starting at the location pointed by s
+ * @brief  Zero data in n bytes of memory starting at the location pointed by s
  * @param  void *s
  * @param  size_t n
  */

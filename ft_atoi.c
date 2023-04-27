@@ -6,26 +6,12 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/20 18:22:03 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:15:42 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-
-// static int	ft_ismemberof(char c, char *arr, int lookfor)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (i < lookfor)
-// 	{
-// 		if (arr[i] == c)
-// 			return (1);
-// 		i++;
-// 	}
-// 	return (0);
-// }
 
 /** 
  * @brief  I turn little char strings into integers
@@ -57,7 +43,3 @@ int	ft_atoi(const char *str)
 	}
 	return (nbr * sign);
 }
-// int main()
-// {
-// 	ft_atoi("+0000000000000000000000000000000000000000000000000000123");
-// }

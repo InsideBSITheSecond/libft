@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/** 
+ * @brief  Get the last node from [lst] and return it
+ * @param  t_list *lst
+ * @retval t_list*
+ */
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*nl;

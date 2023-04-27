@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:26:17 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/20 15:18:34 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:49:13 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-// int main()
-// {
-// 	char *s1;
-// 	char *s2;
-
-// 	s1 = ft_strnstr("aaxx", "xx", 5);
-// 	s2 = strnstr("aaxx", "xx", 5);
-// 	s1 = ft_strnstr("aaxx", "xx", 6);
-// 	s2 = strnstr("aaxx", "xx", 6);
-// }

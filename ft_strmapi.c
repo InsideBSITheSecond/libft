@@ -14,8 +14,16 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
+/**
+ * @brief  Applies the function [f] to each character of the string [s], and 
+ * * passing its index as first argument to create a new string 
+ * * resulting from successive applications of ’f’.
+ * @note   Memory for the new string is obtained 
+ * with malloc and can be freed with free
+ * @param  char *c
+ * @retval char*
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;
@@ -25,7 +33,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (0);
 	str = ft_calloc(ft_strlen((char *)s) + 1, sizeof(char));
 	if (!str)
+	{
+		free(str);
 		return (0);
+	}
 	i = 0;
 	while (s[i])
 	{
@@ -34,14 +45,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (str);
 }
-
-// char	test(unsigned int i, char c)
-// {
-// 	(void)i;
-// 	return (c + 1);
-// }
-
-// int	main(void)
-// {
-// 	printf("%s", ft_strmapi("hello world", &test));
-// }
