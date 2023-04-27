@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /** 
- * @brief  The oracle will predict the size needed to old the split string
+ * @brief  The oracle will predict the size needed to hold the split string
  * @param  char *s
  * @param  char c
  * @retval size_t
@@ -45,6 +45,11 @@ static size_t	ft_sizeoracle(const char *s, char c)
  */
 static char	**ft_splitfree(char **split)
 {
+	int	i;
+
+	i = 0;
+	while (split[i])
+		free(split[i++]);
 	free(split);
 	return (0);
 }
@@ -63,12 +68,10 @@ char	**ft_split(const char *s, char c)
 	size_t	i;
 	size_t	len;
 
-	if (!s)
-		return (0);
 	i = 0;
 	split = (char **)ft_calloc(sizeof(char *), (ft_sizeoracle(s, c) + 1));
 	if (!split)
-		return (ft_splitfree(split));
+		return (0);
 	while (*s)
 	{
 		if (*s != c)
@@ -76,7 +79,9 @@ char	**ft_split(const char *s, char c)
 			len = 0;
 			while (*s && *s != c && ++len)
 				++s;
-			split[i++] = ft_substr(s - len, 0, len);
+			split[i] = ft_substr(s - len, 0, len);
+			if (!split[i++])
+				return (ft_splitfree(split));
 		}
 		else
 			++s;

@@ -30,10 +30,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (0);
 	str = ft_calloc(ft_strlen((char *)s) + 1, sizeof(char));
 	if (!str)
-	{
-		free(str);
 		return (0);
-	}
 	i = 0;
 	while (s[i])
 	{

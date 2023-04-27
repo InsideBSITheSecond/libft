@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/27 15:44:14 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/27 17:41:41 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,7 @@ char	*ft_strdup(const char *c)
 
 	p = ft_calloc(ft_strlen((char *)c) + 1, sizeof(char));
 	if (!p)
-	{
-		free(p);
 		return (0);
-	}		
 	ft_strlcpy(p, c, ft_strlen((char *)c) + 1);
 	return (p);
 }
