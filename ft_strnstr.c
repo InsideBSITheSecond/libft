@@ -6,12 +6,11 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:26:17 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/27 15:49:13 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:07:18 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 /** 
  * @brief  Finds the first occurence of the substring [needle]

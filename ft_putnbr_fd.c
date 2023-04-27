@@ -2,20 +2,15 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2023/04/13 18:13:52 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/13 18:13:52 by llegrand         ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/27 16:09:30 by llegrand          #+#    #+#             */
+/*   Updated: 2023/04/27 16:09:30 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
-#include <stdio.h>
 
 /** 
  * @brief  Write the [n] number into [fd] file descriptor

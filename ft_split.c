@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /** 
  * @brief  The oracle will predict the size needed to old the split string

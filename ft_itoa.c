@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 /** 
  * @brief  Helper function for ft_itoa to know the length of the given integer
