@@ -41,35 +41,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
 	}
 	return (nl);
 }
-
-// void	*ft_map(void *ct)
-// {
-// 	int i;
-// 	void	*c;
-// 	char	*pouet;
-
-// 	c = ct;
-// 	i = -1;
-// 	pouet = (char *)c;
-// 	while (pouet[++i])
-// 		if (pouet[i] == 'o')
-// 			pouet[i] = 'a';
-// 	return (c);
-// }
-
-// void    ft_del(void *content)
-// {
-// 	free(content);
-// }
-
-// int main()
-// {
-// 	t_list *test;
-
-// 	test = ft_lstnew(ft_strdup("lorem"));
-// 	ft_lstadd_back(&test, ft_lstnew(ft_strdup("ispum")));
-// 	ft_lstadd_back(&test, ft_lstnew(ft_strdup("dolor")));
-// 	ft_lstadd_back(&test, ft_lstnew(ft_strdup("sit")));
-// 	ft_lstadd_back(&test, ft_lstnew(ft_strdup("amet")));
-// 	test = ft_lstmap(test, &ft_map, &ft_del);
-// }
