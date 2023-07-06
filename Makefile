@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/05/10 17:42:33 by llegrand         ###   ########.fr        #
+#    Updated: 2023/07/05 18:15:33 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,18 +14,35 @@ CC := cc
 CCARGS := -Wall -Werror -Wextra
 
 AR := ar
-ARARGS := -crs
+ARARGS := -crs		
 
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
-		ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c \
-		ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_calloc.c ft_strmapi.c ft_substr.c ft_strjoin.c \
-		ft_strtrim.c ft_strdup.c ft_split.c ft_itoa.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-		ft_putnbr_fd.c ft_atoi.c
+CL			= chained_lists/
+SRCS_CL 	= $(CL)ft_lstnew.c $(CL)ft_lstdelone.c $(CL)ft_lstadd_front.c $(CL)ft_lstsize.c $(CL)ft_lstlast.c $(CL)ft_lstadd_back.c $(CL)ft_lstclear.c $(CL)ft_lstiter.c $(CL)ft_lstmap.c
 
-BONUS = ft_lstnew_bonus.c ft_lstdelone_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+CMP			= compare/
+SRCS_CMP	= $(CMP)ft_isalpha.c $(CMP)ft_isdigit.c $(CMP)ft_isalnum.c $(CMP)ft_isascii.c $(CMP)ft_isprint.c
+
+CNV			= convert/
+SRCS_CNV 	= $(CNV)ft_atoi.c $(CNV)ft_itoa.c $(CNV)ft_toupper.c $(CNV)ft_tolower.c
+
+FD			= fd/
+SRCS_FD		= $(FD)ft_putchar_fd.c $(FD)ft_putstr_fd.c $(FD)ft_putendl_fd.c $(FD)ft_putnbr_fd.c
+
+MEM			= memory/
+SRCS_MEM 	= $(MEM)ft_memset.c $(MEM)ft_bzero.c $(MEM)ft_memcpy.c $(MEM)ft_memmove.c $(MEM)ft_memchr.c $(MEM)ft_memcmp.c $(MEM)ft_calloc.c
+
+STR			= strings/
+SRCS_STR 	= $(STR)ft_strlcpy.c $(STR)ft_strlcat.c $(STR)ft_strlen.c $(STR)ft_strchr.c $(STR)ft_strrchr.c $(STR)ft_strncmp.c $(STR)ft_strnstr.c $(STR)ft_strmapi.c $(STR)ft_substr.c $(STR)ft_strjoin.c $(STR)ft_strtrim.c $(STR)ft_strdup.c $(STR)ft_split.c $(STR)ft_striteri.c
+
+PF			= printf/
+SRCS_PF		= $(PF)ft_printf.c $(PF)ft_puthex.c $(PF)ft_putnbr.c $(PF)ft_putptr.c $(PF)ft_putstr.c
+
+GNL			= get_next_line/
+SRCS_GNL	= $(GNL)get_next_line_utils.c $(GNL)get_next_line.c
+
+SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_GNL) $(SRCS_PF)
 
 OBJS := $(SRCS:.c=.o)
-BOBJS := $(BONUS:.c=.o)
 
 NAME := libft.a
 
@@ -33,7 +50,7 @@ $(NAME) : $(OBJS)
 	$(AR) $(ARARGS) $(NAME) $(OBJS)
 
 %.o : %.c
-	$(CC) $(CCARGS) -I ./ -c $< -o ${<:.c=.o}
+	$(CC) $(CCARGS) -I ./includes -c $< -o ${<:.c=.o}
 
 clean :
 	rm -f $(OBJS) $(BOBJS)
