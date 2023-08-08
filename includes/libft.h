@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/27 15:51:41 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/08/08 15:36:53 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ void		ft_lstdelone(t_list *lst, void (*del)(void*));
 void		ft_lstclear(t_list **lst, void (*del)(void*));
 void		ft_lstiter(t_list *lst, void (*f)(void*));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*));
+char		*ft_strformat(const char *str, ...);
 
 #endif

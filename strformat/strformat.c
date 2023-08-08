@@ -23,14 +23,16 @@ char *process_next_arg(char *str, va_list args)
 	type = ft_strchr("cspdiuxX%", (int)*(str + 1));
 	if (type)
 	{
-		if (type[0] == 'c')
-			ret = (char *)va_arg(args, int);
-		else if (type[0] == 's')
+		if (type[0] == 's')
 			ret = va_arg(args, char *);
 		else if (type[0] == 'i')
 			ret = ft_itoa(va_arg(args, int));
+		else
+			ret = "(error)";
+		return (ret);
 	}
-	return (ret);
+	else
+		return (0);
 }
 
 char	*ft_strformat(const char *str, ...)
@@ -63,9 +65,11 @@ char	*ft_strformat(const char *str, ...)
 	return (ret);
 }
 
-int main(int argc, char **argv)
+/*int main(int argc, char **argv)
 {
+	(void)argc;
+	(void)argv;
 	char *value = ft_strformat("hello %s %i im something in between %s %i", "senpai", 15684, "uwu", 1648);
 	printf("%s", value);
 	free(value);
-}
+}*/
