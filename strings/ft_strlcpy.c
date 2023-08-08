@@ -6,11 +6,11 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/14 19:01:40 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/08/08 12:33:52 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /** 
  * @brief  Copies the [src] string to the [dst] buffer, 

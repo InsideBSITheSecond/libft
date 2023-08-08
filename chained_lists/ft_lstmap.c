@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /** 
  * @brief  Create and return a new list created by passing each nodes from [lst]

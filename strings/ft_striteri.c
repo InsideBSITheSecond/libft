@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /**
  * @brief  Iterate over the [s] string and pass each characters to the [f] 

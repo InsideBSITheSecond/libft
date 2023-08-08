@@ -6,12 +6,12 @@
 #    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/07/06 18:33:53 by llegrand         ###   ########.fr        #
+#    Updated: 2023/08/08 13:20:09 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := cc
-CCARGS := -Wall -Werror -Wextra
+CCARGS := #-Wall -Werror -Wextra
 
 AR := ar
 ARARGS := -crs		
@@ -40,7 +40,10 @@ SRCS_PF		= $(PF)ft_printf.c $(PF)ft_puthex.c $(PF)ft_putnbr.c $(PF)ft_putptr.c $
 GNL			= get_next_line/
 SRCS_GNL	= $(GNL)get_next_line_utils.c $(GNL)get_next_line.c
 
-SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_GNL) $(SRCS_PF)
+SFORM		= strformat/
+SRCS_SFORM	= $(SFORM)strformat.c
+
+SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_GNL) $(SRCS_PF) $(SRCS_SFORM)
 
 OBJS := $(SRCS:.c=.o)
 

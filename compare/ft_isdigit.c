@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:54:14 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/09 13:38:08 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/08/08 12:33:52 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /** 
  * @brief  Test if [c] is a numerical character

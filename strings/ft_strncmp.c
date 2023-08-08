@@ -6,11 +6,11 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 14:54:40 by llegrand          #+#    #+#             */
-/*   Updated: 2023/04/14 18:02:07 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/08/08 12:33:52 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /** 
  * @brief  Compares the first [n] bytes of the two strings [s1] and [s2].

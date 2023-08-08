@@ -6,11 +6,11 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:43:53 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/27 15:50:32 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/08/08 12:33:52 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /** 
  * @brief  Helper function that tells if the character [c] is present in [arr]

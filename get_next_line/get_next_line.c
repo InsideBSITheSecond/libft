@@ -6,11 +6,11 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:29:59 by llegrand          #+#    #+#             */
-/*   Updated: 2023/06/20 16:44:02 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/08/08 12:51:54 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../includes/get_next_line.h"
 
 char	*join_free(char *memory, char *new_content)
 {

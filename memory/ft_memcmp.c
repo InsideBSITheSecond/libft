@@ -6,11 +6,11 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 15:44:31 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/18 20:13:51 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/08/08 12:33:52 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /** 
  * @brief  Compares the first [n] bytes (each interpreted as unsigned char)

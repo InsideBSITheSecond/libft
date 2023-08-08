@@ -6,11 +6,11 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 16:30:46 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/04/27 16:07:28 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/08/08 12:33:15 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /** 
  * @brief  Returns a substring from [s]. The substring begins
