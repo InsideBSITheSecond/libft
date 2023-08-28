@@ -13,9 +13,15 @@
 #include "../includes/libft.h"
 #include "../includes/ft_printf.h"
 #include "../includes/get_next_line.h"
-#include <stdio.h>
 
-char *process_next_arg(char *str, va_list args)
+typedef struct s_container
+{
+	int		i;
+	int		j;
+	char	*ret;
+}				t_container;
+
+char	*process_next_arg(char *str, va_list args)
 {
 	char	*type;
 	char	*ret;
@@ -37,39 +43,26 @@ char *process_next_arg(char *str, va_list args)
 
 char	*ft_strformat(const char *str, ...)
 {
-	va_list	args;
-	int		i;
-	int		j;
-	char	*ret;
+	va_list		args;
+	t_container	data;
 
 	va_start(args, str);
-	i = 0;
-	j = 0;
-	ret = 0;
-	while (str[i])
+	while (str[data.i])
 	{
-		while (str[i] && str[i] != '%')
-			i++;
- 		if (!ret)
-			ret = ft_substr(str, j, i);
+		while (str[data.i] && str[data.i] != '%')
+			data.i++;
+		if (!data.ret)
+			data.ret = ft_substr(str, data.j, data.i);
 		else
-			ret = join_free(ret, ft_substr(str, j, i - j));
-		if (str[i] && str[i] == '%')
+			data.ret = join_free(data.ret, ft_substr(str, data.j, data.i - data.j));
+		if (str[data.i] && str[data.i] == '%')
 		{
-			ret = join_free(ret, process_next_arg((char *)str + i, args));
-			i += 2;
+			data.ret = join_free(data.ret,
+					process_next_arg((char *)str + data.i, args));
+			data.i += 2;
 		}
-		j = i;
+		data.j = data.i;
 	}
 	va_end(args);
-	return (ret);
+	return (data.ret);
 }
-
-/*int main(int argc, char **argv)
-{
-	(void)argc;
-	(void)argv;
-	char *value = ft_strformat("hello %s %i im something in between %s %i", "senpai", 15684, "uwu", 1648);
-	printf("%s", value);
-	free(value);
-}*/
