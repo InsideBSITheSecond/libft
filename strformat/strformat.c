@@ -33,6 +33,8 @@ char	*process_next_arg(char *str, va_list args)
 			ret = va_arg(args, char *);
 		else if (type[0] == 'i')
 			ret = ft_itoa(va_arg(args, int));
+		else if (type[0] == 'd')
+			ret = ft_dtoa(va_arg(args, double), 16);
 		else
 			ret = "(error)";
 		return (ret);
@@ -46,6 +48,7 @@ char	*ft_strformat(const char *str, ...)
 	va_list		args;
 	t_container	data;
 
+	data = (t_container){.i = 0, .j = 0, .ret = 0};
 	va_start(args, str);
 	while (str[data.i])
 	{
@@ -54,7 +57,8 @@ char	*ft_strformat(const char *str, ...)
 		if (!data.ret)
 			data.ret = ft_substr(str, data.j, data.i);
 		else
-			data.ret = join_free(data.ret, ft_substr(str, data.j, data.i - data.j));
+			data.ret = join_free(data.ret,
+					ft_substr(str, data.j, data.i - data.j));
 		if (str[data.i] && str[data.i] == '%')
 		{
 			data.ret = join_free(data.ret,

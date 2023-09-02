@@ -6,15 +6,15 @@
 #    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/08/28 17:32:10 by llegrand         ###   ########.fr        #
+#    Updated: 2023/09/02 14:54:27 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := cc
-CCARGS := #-Wall -Werror -Wextra
+CCARGS := -Wall -Werror -Wextra -I ./includes -c -O3
 
 AR := ar
-ARARGS := -crs		
+ARARGS := -crs
 
 CL			= chained_lists/
 SRCS_CL 	= $(CL)ft_lstnew.c $(CL)ft_lstdelone.c $(CL)ft_lstadd_front.c $(CL)ft_lstsize.c $(CL)ft_lstlast.c $(CL)ft_lstadd_back.c $(CL)ft_lstclear.c $(CL)ft_lstiter.c $(CL)ft_lstmap.c
@@ -53,7 +53,7 @@ $(NAME) : $(OBJS)
 	$(AR) $(ARARGS) $(NAME) $(OBJS)
 
 %.o : %.c
-	$(CC) $(CCARGS) -I ./includes -c $< -o ${<:.c=.o}
+	$(CC) $(CCARGS) $< -o ${<:.c=.o}
 
 clean :
 	rm -f $(OBJS) $(BOBJS)
@@ -86,4 +86,4 @@ test :
 	gcc ${SRCS} -g -o a.out
 	./a.out ${arg}
 
-.PHONY : clean fclean all re 
+.PHONY : clean fclean all re
