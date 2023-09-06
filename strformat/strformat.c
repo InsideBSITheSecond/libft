@@ -21,6 +21,16 @@ typedef struct s_container
 	char	*ret;
 }				t_container;
 
+char	*join_free2(char *memory, char *new_content)
+{
+	char	*tmp;
+
+	tmp = ft_strjoin(memory, new_content);
+	free(memory);
+	free(new_content);
+	return (tmp);
+}
+
 char	*process_next_arg(char *str, va_list args)
 {
 	char	*type;
@@ -57,11 +67,11 @@ char	*ft_strformat(const char *str, ...)
 		if (!data.ret)
 			data.ret = ft_substr(str, data.j, data.i);
 		else
-			data.ret = join_free(data.ret,
+			data.ret = join_free2(data.ret,
 					ft_substr(str, data.j, data.i - data.j));
 		if (str[data.i] && str[data.i] == '%')
 		{
-			data.ret = join_free(data.ret,
+			data.ret = join_free2(data.ret,
 					process_next_arg((char *)str + data.i, args));
 			data.i += 2;
 		}
