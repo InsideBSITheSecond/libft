@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
+#    By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/09/06 18:39:21 by llegrand         ###   ########.fr        #
+#    Updated: 2023/09/09 22:05:21 by insidebsi        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ MEM			= memory/
 SRCS_MEM 	= $(MEM)ft_memset.c $(MEM)ft_bzero.c $(MEM)ft_memcpy.c $(MEM)ft_memmove.c $(MEM)ft_memchr.c $(MEM)ft_memcmp.c $(MEM)ft_calloc.c
 
 STR			= strings/
-SRCS_STR 	= $(STR)ft_strcat.c $(STR)ft_strlcpy.c $(STR)ft_strlcat.c $(STR)ft_strlen.c $(STR)ft_strchr.c $(STR)ft_strrchr.c $(STR)ft_strncmp.c $(STR)ft_strnstr.c $(STR)ft_strmapi.c $(STR)ft_substr.c $(STR)ft_strjoin.c $(STR)ft_strtrim.c $(STR)ft_strdup.c $(STR)ft_split.c $(STR)ft_striteri.c
+SRCS_STR 	= $(STR)ft_strcmp.c $(STR)ft_strcat.c $(STR)ft_strlcpy.c $(STR)ft_strlcat.c $(STR)ft_strlen.c $(STR)ft_strchr.c $(STR)ft_strrchr.c $(STR)ft_strncmp.c $(STR)ft_strnstr.c $(STR)ft_strmapi.c $(STR)ft_substr.c $(STR)ft_strjoin.c $(STR)ft_strtrim.c $(STR)ft_strdup.c $(STR)ft_split.c $(STR)ft_striteri.c
 
 PF			= printf/
 SRCS_PF		= $(PF)ft_printf.c $(PF)ft_puthex.c $(PF)ft_putnbr.c $(PF)ft_putptr.c $(PF)ft_putstr.c
@@ -43,7 +43,7 @@ SRCS_GNL	= $(GNL)get_next_line_utils.c $(GNL)get_next_line.c
 SFORM		= strformat/
 SRCS_SFORM	= $(SFORM)strformat.c
 
-SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_GNL) $(SRCS_PF) $(SRCS_SFORM)
+SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM)
 
 OBJS := $(SRCS:.c=.o)
 

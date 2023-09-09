@@ -33,11 +33,6 @@ static int	ft_ilen(unsigned int n)
 
 	i = 1;
 	num = n;
-	if (n < 0)
-	{
-		i = 2;
-		num = -n;
-	}
 	while (num > 9)
 	{
 		num = num / 10;
@@ -57,11 +52,6 @@ char	*ft_uitoa(unsigned int nbr)
 		return (0);
 	i = ft_ilen(nbr);
 	unbr = nbr;
-	if (nbr < 0)
-	{
-		unbr = -nbr;
-		buffer[0] = '-';
-	}
 	buffer[i] = 0;
 	buffer[i - 1] = '0';
 	while (unbr > 0)

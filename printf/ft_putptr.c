@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+#include <stdint.h>
 
 int	ft_ptrlen(uintptr_t ptr)
 {
