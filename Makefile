@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+         #
+#    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/09/09 22:05:21 by insidebsi        ###   ########.fr        #
+#    Updated: 2023/09/15 16:01:38 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := cc
-CCARGS := -Wall -Werror -Wextra -I ./includes -c -O3
+CCARGS := -Wall -Werror -Wextra -I ./includes -c -g3
 
 AR := ar
 ARARGS := -crs
 
-CL			= chained_lists/
+CL			= linked_lists/
 SRCS_CL 	= $(CL)ft_lstnew.c $(CL)ft_lstdelone.c $(CL)ft_lstadd_front.c $(CL)ft_lstsize.c $(CL)ft_lstlast.c $(CL)ft_lstadd_back.c $(CL)ft_lstclear.c $(CL)ft_lstiter.c $(CL)ft_lstmap.c
 
 CMP			= compare/
