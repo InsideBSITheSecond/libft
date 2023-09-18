@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/09/09 22:05:44 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/09/18 17:52:44 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct s_cdllist
+{
+	void				*content;
+	struct s_cdllist	*next;
+	struct s_cdllist	*prev;
+}				t_cdllist;
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int d);
@@ -71,4 +78,9 @@ char		*ft_strformat(const char *str, ...);
 char		*ft_strcat(char *src, char *dst);
 char		*ft_dtoa(double d, int prec);
 int			ft_strcmp(char *s1, char *s2);
+
+t_cdllist	*ft_cdllnew(void *data);
+void	ft_cdlladd_front(t_cdllist *tail, t_cdllist *new);
+void	ft_cdlladd_back(t_cdllist *tail, t_cdllist *new);
+void	ft_cdlliter(t_cdllist *tail, void (*f)(void*));
 #endif
