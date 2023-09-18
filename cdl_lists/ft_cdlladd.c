@@ -15,17 +15,18 @@
 
 void	ft_cdlladd_front(t_cdllist *tail, t_cdllist *new)
 { 
-
+	if (!tail || !new)
+		return ;
 	tail->next->prev = new;
 	new->next = tail->next;
 	tail->next = new;
 	new->prev = tail;
 }
 
-void	ft_cdlladd_back(t_cdllist *tail, t_cdllist *new)
+void	ft_cdlladd_back(t_cdllist **tail, t_cdllist *new)
 {
-	tail->next->prev = new;
-	new->next = tail->next;
-	tail->next = new;
-	new->prev = tail;
+	if (!tail || !new)
+		return ;
+	ft_cdlladd_front(*tail, new);
+	*tail = new;
 }

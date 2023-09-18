@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/09/18 17:52:44 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/09/18 22:32:14 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ int			ft_strcmp(char *s1, char *s2);
 
 t_cdllist	*ft_cdllnew(void *data);
 void	ft_cdlladd_front(t_cdllist *tail, t_cdllist *new);
-void	ft_cdlladd_back(t_cdllist *tail, t_cdllist *new);
+void	ft_cdlladd_back(t_cdllist **tail, t_cdllist *new);
 void	ft_cdlliter(t_cdllist *tail, void (*f)(void*));
 #endif
