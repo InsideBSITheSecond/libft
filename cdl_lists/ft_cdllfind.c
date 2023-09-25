@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cdlladd.c                                       :+:      :+:    :+:   */
+/*   ft_cdllfind.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 16:17:52 by llegrand          #+#    #+#             */
-/*   Updated: 2023/09/18 16:17:52 by llegrand         ###   ########.fr       */
+/*   Created: 2023/09/25 15:40:15 by llegrand          #+#    #+#             */
+/*   Updated: 2023/09/25 15:40:15 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include <stdio.h>
+#include "../includes/ft_printf.h"
 
-void	ft_cdlladd_front(t_cdllist *tail, t_cdllist *new)
-{ 
-	if (!tail || !new)
-		return ;
-	tail->next->prev = new;
-	new->next = tail->next;
-	tail->next = new;
-	new->prev = tail;
-}
-
-void	ft_cdlladd_back(t_cdllist **tail, t_cdllist *new)
+t_cdllist	*ft_cdllfind(t_cdllist *tail, void *data)
 {
-	if (!tail || !new)
-		return ;
-	ft_cdlladd_front(*tail, new);
-	*tail = new;
+	t_cdllist *head = tail->next;
+
+	while (head != tail)
+	{
+		if (data == head->content)
+			return (head);
+		head = head->next;
+	}
+	if (data == head->content)
+		return (head);
+	else
+		return (NULL);
 }
-
-// int	ft_cdlladdu_front(t_cdllist *tail, t_cdllist *new)
-// {
-
-// }

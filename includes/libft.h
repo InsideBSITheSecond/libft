@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/09/18 22:32:14 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/09/25 15:45:35 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,5 @@ t_cdllist	*ft_cdllnew(void *data);
 void	ft_cdlladd_front(t_cdllist *tail, t_cdllist *new);
 void	ft_cdlladd_back(t_cdllist **tail, t_cdllist *new);
 void	ft_cdlliter(t_cdllist *tail, void (*f)(void*));
+t_cdllist	*ft_cdllfind(t_cdllist *tail, void *data);
 #endif
