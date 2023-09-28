@@ -6,7 +6,7 @@
 #    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/09/25 15:47:05 by llegrand         ###   ########.fr        #
+#    Updated: 2023/09/28 15:34:43 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ SFORM		= strformat/
 SRCS_SFORM	= $(SFORM)strformat.c
 
 CDLLIST		= cdl_lists/
-SRCS_CDLL	= $(CDLLIST)ft_cdlladd.c $(CDLLIST)ft_cdlliter.c $(CDLLIST)ft_cdllnew.c $(CDLLIST)ft_cdllfind.c
+SRCS_CDLL	= $(CDLLIST)ft_cdlladd.c $(CDLLIST)ft_cdlliter.c $(CDLLIST)ft_cdllnew.c $(CDLLIST)ft_cdllfind.c $(CDLLIST)ft_cdllsize.c $(CDLLIST)ft_cdlldrop.c $(CDLLIST)ft_cdlldelone.c
 
 SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL)
 

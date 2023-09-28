@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/09/25 15:45:35 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/09/28 15:33:47 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,7 @@ void	ft_cdlladd_front(t_cdllist *tail, t_cdllist *new);
 void	ft_cdlladd_back(t_cdllist **tail, t_cdllist *new);
 void	ft_cdlliter(t_cdllist *tail, void (*f)(void*));
 t_cdllist	*ft_cdllfind(t_cdllist *tail, void *data);
+int	ft_cdllsize(t_cdllist *tail);
+void	ft_cdlldelone(t_cdllist *node);
+void	ft_cdlldrop(t_cdllist *tail);
 #endif
