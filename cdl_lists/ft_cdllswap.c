@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cdlliter.c                                      :+:      :+:    :+:   */
+/*   ft_cdllswap.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 17:24:19 by llegrand          #+#    #+#             */
-/*   Updated: 2023/09/18 17:24:19 by llegrand         ###   ########.fr       */
+/*   Created: 2023/09/30 16:46:50 by llegrand          #+#    #+#             */
+/*   Updated: 2023/09/30 16:46:50 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_cdlliter(t_cdllist *tail, void (*f)(void*))
+void	ft_cdllswap(t_cdllist *tail)
 {
-	t_cdllist	*head;
+	t_cdllist	*head = tail->next;
 
-	if (tail)
-	{
-		head = tail->next;
-		while (head != tail)
-		{
-			f(head);
-			head = head->next;
-		}
-		f(head);
-	}
+	tail->next = head->next;
+	head->next->next->prev = head;
+	head->prev = head->next;
+	head->next = head->next->next;
+	tail->next->next = head;
+	tail->next->prev = tail;
 }
