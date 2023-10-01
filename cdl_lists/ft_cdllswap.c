@@ -16,6 +16,8 @@ void	ft_cdllswap(t_cdllist *tail)
 {
 	t_cdllist	*head = tail->next;
 
+	if (!tail)
+		return ;
 	tail->next = head->next;
 	head->next->next->prev = head;
 	head->prev = head->next;

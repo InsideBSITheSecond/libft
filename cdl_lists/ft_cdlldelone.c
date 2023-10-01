@@ -12,11 +12,19 @@
 
 #include "../includes/libft.h"
 
-void	ft_cdlldelone(t_cdllist *node)
+void	ft_cdlldelone(t_cdllist *node, void (*del)(void*))
 {
-	if (node->next == node && node->prev == node)
+	if (!node)
+		return ;
+	del(node);
+	if ((node->next == node && node->prev == node)
+		&& (node->next && node->prev))
+	{
+		node->next = NULL;
+		node->prev = NULL;
 		free(node);
-	else
+	}
+	else 
 	{
 		node->prev->next = node->next;
 		node->next->prev = node->prev;

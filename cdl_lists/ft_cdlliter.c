@@ -16,6 +16,11 @@ void	ft_cdlliter(t_cdllist *tail, void (*f)(void*))
 {
 	t_cdllist	*head;
 
+	if (!tail || !f)
+		return ;
+	if (!tail->next || !tail->prev)
+		return ;
+	head = NULL;
 	if (tail)
 	{
 		head = tail->next;

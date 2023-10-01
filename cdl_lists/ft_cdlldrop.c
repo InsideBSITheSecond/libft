@@ -12,12 +12,23 @@
 
 #include "../includes/libft.h"
 
-void	dropone(void *node)
+void	ft_cdlldrop(t_cdllist **tail, void (*del)(void*))
 {
-	ft_cdlldelone((t_cdllist *)node);
-}
+	t_cdllist	*nlstp;
+	t_cdllist	*tmplst;
 
-void	ft_cdlldrop(t_cdllist *tail)
-{
-	ft_cdlliter(tail, dropone);
+	if (!del || !tail || !*tail)
+		return ;
+	tmplst = 0;
+	nlstp = (*tail)->next;
+	while (nlstp != *tail)
+	{
+		if (!nlstp->next)
+			return ;
+		tmplst = nlstp->next;
+		ft_cdlldelone(nlstp, del);
+		nlstp = tmplst;
+	}
+	ft_cdlldelone(nlstp, del);
+	*tail = 0;
 }
