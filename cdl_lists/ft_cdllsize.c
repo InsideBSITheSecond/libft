@@ -14,12 +14,13 @@
 
 int	ft_cdllsize(t_cdllist *tail)
 {
-	t_cdllist	*head = tail->next;
+	t_cdllist	*head;
 	int			size;
 	
 	size = 1;
 	if (!tail)
 		return (-1);
+	head = tail->next;
 	while (head != tail)
 	{
 		head = head->next;
