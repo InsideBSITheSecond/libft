@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
+#    By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/09/30 16:52:09 by llegrand         ###   ########.fr        #
+#    Updated: 2023/10/06 19:29:42 by insidebsi        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ SRCS_SFORM	= $(SFORM)strformat.c
 CDLLIST		= cdl_lists/
 SRCS_CDLL	= $(CDLLIST)ft_cdlladd.c $(CDLLIST)ft_cdlliter.c $(CDLLIST)ft_cdllnew.c $(CDLLIST)ft_cdllfind.c $(CDLLIST)ft_cdllsize.c $(CDLLIST)ft_cdlldrop.c $(CDLLIST)ft_cdlldelone.c $(CDLLIST)ft_cdllswap.c
 
-SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL)
+SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL) $(SRCS_GNL)
 
 OBJS := $(SRCS:.c=.o)
 
