@@ -25,10 +25,10 @@ char	*get_to_nl(char *memory);
 char	*get_from_nl(char *memory);
 char	*read_file_until_nl(int fd, char *memory);
 
-char	*ft_strjoin(char const *s1, char const *s2);
-void	*ft_calloc(size_t nmemb, size_t size);
-size_t	ft_strlen(const char *str);
-void	ft_bzero(void *s, size_t n);
-char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin_gnl(char const *s1, char const *s2);
+void	*ft_calloc_gnl(size_t nmemb, size_t size);
+size_t	ft_strlen_gnl(const char *str);
+void	ft_bzero_gnl(void *s, size_t n);
+char	*ft_strchr_gnl(const char *s, int c);
 
 #endif

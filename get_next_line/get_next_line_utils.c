@@ -12,30 +12,7 @@
 
 #include "get_next_line.h"
 
-/** 
- * @brief  Return a pointer to a new string which is
- * the result of the concatenation of [s1] and [s2]
- * @note   Memory for the new string is obtained 
- * with malloc and can be freed with free
- * @param  char *s1
- * @param  char *s2
- * @retval char*
- */
-// char	*ft_strjoin(char const *s1, char const *s2)
-// {
-// 	void	*p;
-// 	size_t	s;
-
-// 	s = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
-// 	p = ft_calloc(sizeof(char), s);
-// 	if (!p)
-// 		return (0);
-// 	ft_strlcpy(p, s1, ft_strlen((char *)s1) + 1);
-// 	ft_strlcat(p, s2, s);
-// 	return (p);
-// }
-
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin_gnl(char const *s1, char const *s2)
 {
 	int		sizetotal;
 	char	*res;
@@ -43,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 
 	i = 0;
-	sizetotal = ft_strlen(s1) + ft_strlen(s2);
+	sizetotal = ft_strlen_gnl(s1) + ft_strlen_gnl(s2);
 	res = malloc(sizeof(char) * (sizetotal + 1));
 	if (!res || !s1 || !s2)
 		return (NULL);
@@ -70,14 +47,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
  * @param  size_t size
  * @retval void*
  */
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc_gnl(size_t nmemb, size_t size)
 {
 	void	*p;
 
 	p = (void *)malloc(nmemb * size);
 	if (!p)
 		return (0);
-	ft_bzero(p, nmemb * size);
+	ft_bzero_gnl(p, nmemb * size);
 	return (p);
 }
 
@@ -87,7 +64,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
  * @param  char *str
  * @retval size_t
  */
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen_gnl(const char *str)
 {
 	size_t	i;
 
@@ -102,7 +79,7 @@ size_t	ft_strlen(const char *str)
  * @param  void *s
  * @param  size_t n
  */
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero_gnl(void *s, size_t n)
 {
 	size_t	i;
 
@@ -122,7 +99,7 @@ void	ft_bzero(void *s, size_t n)
  * @param  int *c
  * @retval char*
  */
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr_gnl(const char *s, int c)
 {
 	char	*ptr;
 
@@ -139,66 +116,3 @@ char	*ft_strchr(const char *s, int c)
 		return (ptr);
 	return (0);
 }
-
-/** 
- * @brief  Appends the [src] string to the [dst] string, overwriting 
- * the [dst] terminator and adding one at the end of the result.
- * @note   The strings may not overlap, and the [dst] string
- * must have enough space for the result.
- * @param  char *dst
- * @param  char *src
- * @param  size_t dstsize
- * @retval size_t
- */
-// size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-// {
-// 	size_t	i;
-// 	size_t	l;
-
-// 	l = ft_strlen(dst) + ft_strlen((char *)src);
-// 	if (dstsize == 0)
-// 		return (ft_strlen((char *)src));
-// 	if (ft_strlen(dst) >= dstsize)
-// 		return (ft_strlen((char *)src) + dstsize);
-// 	i = 0;
-// 	while (*dst)
-// 		dst++;
-// 	while ((i < dstsize - (l - ft_strlen((char *)src)) - 1) && src[i])
-// 	{
-// 		dst[i] = src[i];
-// 		i++;
-// 	}
-// 	dst[i] = '\0';
-// 	return (l);
-// }
-
-/** 
- * @brief  Copies the [src] string to the [dst] buffer, 
- * including the terminator.
- * @note   The strings may not overlap, and the [dst]
- * string must have enough space to receive the copy.
- * @param  char *dst
- * @param  char *src
- * @param  size_t dstsize
- * @retval size_t
- */
-// size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-// {
-// 	size_t	dsti;
-// 	size_t	srci;
-
-// 	dsti = 0;
-// 	srci = 0;
-// 	if (!dst || !src)
-// 		return (0);
-// 	while (src[srci] != '\0')
-// 		srci++;
-// 	while (src[dsti] && dsti + 1 < dstsize)
-// 	{
-// 		dst[dsti] = src[dsti];
-// 		dsti++;
-// 	}
-// 	if (dstsize)
-// 		dst[dsti] = '\0';
-// 	return (srci);
-// }
