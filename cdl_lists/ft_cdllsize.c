@@ -16,7 +16,7 @@ int	ft_cdllsize(t_cdllist *tail)
 {
 	t_cdllist	*head;
 	int			size;
-	
+
 	size = 1;
 	if (!tail)
 		return (-1);

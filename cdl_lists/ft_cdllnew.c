@@ -18,7 +18,7 @@ t_cdllist	*ft_cdllnew(void *data)
 
 	lst = (t_cdllist *)ft_calloc(sizeof(t_cdllist), 1);
 	if (!lst)
-		return 0;
+		return (0);
 	lst->content = data;
 	lst->prev = lst;
 	lst->next = lst;
