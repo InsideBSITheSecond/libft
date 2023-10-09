@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/10/07 17:29:38 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/10/09 12:32:20 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <math.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -28,6 +29,44 @@ typedef struct s_cdllist
 	struct s_cdllist	*prev;
 	int					index;
 }						t_cdllist;
+
+typedef struct s_vec2d
+{
+	double				x;
+	double				y;
+}						t_vec2d;
+
+typedef struct s_ivec2d
+{
+	int					x;
+	int					y;
+}						t_ivec2d;
+
+typedef struct s_vec3d
+{
+	double				x;
+	double				y;
+	double				z;
+}						t_vec3d;
+
+typedef struct s_ivec3d
+{
+	int					x;
+	int					y;
+	int					z;
+}						t_ivec3d;
+
+typedef struct s_mappingpoint
+{
+	double				input;
+	int					output;
+}						t_mappingpoint;
+
+typedef struct s_mpmapping
+{
+	int					numpoints;
+	t_mappingpoint		*points;
+}						t_mpmapping;
 
 int						ft_isalpha(int c);
 int						ft_isdigit(int d);
@@ -92,4 +131,22 @@ int						ft_cdllsize(t_cdllist *tail);
 void					ft_cdlldelone(t_cdllist *node, void (*del)(void *));
 void					ft_cdlldrop(t_cdllist **tail, void (*del)(void *));
 void					ft_cdllswap(t_cdllist *tail);
+double					linmap(double val, t_vec2d range1, t_vec2d range2);
+double					mappedlmap(const t_mpmapping *mapping, double input,
+							t_vec2d baserange);
+int						clamp(int value, int limitup, int limitdown);
+t_vec2d					mult_vec2d(t_vec2d a, t_vec2d b);
+t_vec2d					div_vec2d(t_vec2d a, t_vec2d b);
+void					sqr_vec2d(t_vec2d *a, double real_c, double img_c);
+t_vec2d					power_vec2d(t_vec2d a, int n);
+t_vec2d					create_vec2d(double x, double y);
+t_vec2d					add_vec2d(t_vec2d a, t_vec2d b);
+t_vec2d					sub_vec2d(t_vec2d a, t_vec2d b);
+void					real_const_vec2d(t_vec2d *a, double c);
+int						create_argb(int a, int r, int g, int b);
+int						get_a(int trgb);
+int						get_r(int trgb);
+int						get_g(int trgb);
+int						get_b(int trgb);
+
 #endif

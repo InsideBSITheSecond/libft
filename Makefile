@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+         #
+#    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/10/06 19:29:42 by insidebsi        ###   ########.fr        #
+#    Updated: 2023/10/09 12:36:38 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,16 @@ SRCS_SFORM	= $(SFORM)strformat.c
 CDLLIST		= cdl_lists/
 SRCS_CDLL	= $(CDLLIST)ft_cdlladd.c $(CDLLIST)ft_cdlliter.c $(CDLLIST)ft_cdllnew.c $(CDLLIST)ft_cdllfind.c $(CDLLIST)ft_cdllsize.c $(CDLLIST)ft_cdlldrop.c $(CDLLIST)ft_cdlldelone.c $(CDLLIST)ft_cdllswap.c
 
-SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL) $(SRCS_GNL)
+MATH		= math/
+SRCS_MATH	= $(MATH)ft_clamp.c $(MATH)ft_vector_basic.c $(MATH)ft_vector_advanced.c
+
+LINMAP		= linmap/
+SRCS_LINMAP = $(LINMAP)ft_linmap.c $(LINMAP)ft_mlinmap.c
+
+COLORS		= colors/
+SRCS_COLORS	= $(COLORS)ft_colors.c
+
+SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL) $(SRCS_GNL) $(SRCS_MATH) $(SRCS_LINMAP) $(SRCS_COLORS)
 
 OBJS := $(SRCS:.c=.o)
 
