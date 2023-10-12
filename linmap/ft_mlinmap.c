@@ -37,5 +37,5 @@ double	mappedlmap(const t_mpmapping *mapping, double input, t_vec2d baserange)
 	if (!point1 || !point2)
 		return (.0f);
 	return (linmap(input, baserange,
-		(t_vec2d){.x = point1->output, .y = point2->output}));
+			(t_vec2d){.x = point1->output, .y = point2->output}));
 }

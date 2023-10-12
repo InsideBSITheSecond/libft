@@ -6,7 +6,7 @@
 #    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/10/09 12:36:38 by llegrand         ###   ########.fr        #
+#    Updated: 2023/10/12 17:47:03 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ MEM			= memory/
 SRCS_MEM 	= $(MEM)ft_memset.c $(MEM)ft_bzero.c $(MEM)ft_memcpy.c $(MEM)ft_memmove.c $(MEM)ft_memchr.c $(MEM)ft_memcmp.c $(MEM)ft_calloc.c
 
 STR			= strings/
-SRCS_STR 	= $(STR)ft_strcmp.c $(STR)ft_strcat.c $(STR)ft_strlcpy.c $(STR)ft_strlcat.c $(STR)ft_strlen.c $(STR)ft_strchr.c $(STR)ft_strrchr.c $(STR)ft_strncmp.c $(STR)ft_strnstr.c $(STR)ft_strmapi.c $(STR)ft_substr.c $(STR)ft_strjoin.c $(STR)ft_strtrim.c $(STR)ft_strdup.c $(STR)ft_split.c $(STR)ft_striteri.c
+SRCS_STR 	= $(STR)ft_strcontains.c $(STR)ft_strcmp.c $(STR)ft_strcat.c $(STR)ft_strlcpy.c $(STR)ft_strlcat.c $(STR)ft_strlen.c $(STR)ft_strchr.c $(STR)ft_strrchr.c $(STR)ft_strncmp.c $(STR)ft_strnstr.c $(STR)ft_strmapi.c $(STR)ft_substr.c $(STR)ft_strjoin.c $(STR)ft_strtrim.c $(STR)ft_strdup.c $(STR)ft_split.c $(STR)ft_striteri.c
 
 PF			= printf/
 SRCS_PF		= $(PF)ft_printf.c $(PF)ft_puthex.c $(PF)ft_putnbr.c $(PF)ft_putptr.c $(PF)ft_putstr.c
@@ -55,7 +55,10 @@ SRCS_LINMAP = $(LINMAP)ft_linmap.c $(LINMAP)ft_mlinmap.c
 COLORS		= colors/
 SRCS_COLORS	= $(COLORS)ft_colors.c
 
-SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL) $(SRCS_GNL) $(SRCS_MATH) $(SRCS_LINMAP) $(SRCS_COLORS)
+CONTROL		= control/
+SRCS_CTRL	= $(CONTROL)ft_for.c
+
+SRCS = $(SRCS_CTRL) $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL) $(SRCS_GNL) $(SRCS_MATH) $(SRCS_LINMAP) $(SRCS_COLORS)
 
 OBJS := $(SRCS:.c=.o)
 

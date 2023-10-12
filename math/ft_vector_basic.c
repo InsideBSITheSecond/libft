@@ -44,4 +44,3 @@ void	real_const_vec2d(t_vec2d *a, double c)
 	(*a).x *= c;
 	(*a).y *= c;
 }
-

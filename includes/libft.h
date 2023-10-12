@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/10/09 12:32:20 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/10/10 18:35:34 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,5 +148,5 @@ int						get_a(int trgb);
 int						get_r(int trgb);
 int						get_g(int trgb);
 int						get_b(int trgb);
-
+int						ft_strcontainsonly(char *str, char *chars);
 #endif
