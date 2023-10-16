@@ -20,7 +20,7 @@ t_cdllist	*ft_cdllfind(t_cdllist *tail, void *data)
 {
 	t_cdllist	*head;
 
-	if (!tail || !data)
+	if (!tail)
 		return (0);
 	head = tail->next;
 	while (head != tail)

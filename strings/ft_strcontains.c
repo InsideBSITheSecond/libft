@@ -12,29 +12,28 @@
 
 #include "../includes/libft.h"
 
-int	ft_strcontainsonly(char *str, char *chars, char *prefix)
+int ft_strcontsowpref(char *str, char *chars, char prefix)
+{
+	if (!str || !chars || !prefix)
+		return (-1);
+	if (str[0] != prefix && ft_strchr(chars, str[0]))
+		return (ft_strcontsonly(str, chars));
+	if (str[0] == prefix)
+		return (ft_strcontsonly(++str, chars));
+	return (0);
+}
+
+int	ft_strcontsonly(char *str, char *chars)
 {
 	int	i;
-	int	j;
-	int	found;
 
 	i = 0;
-	j = 0;
-	found = 0;
 	while (i < (int)ft_strlen(str))
 	{
-		j = 0;
-		// scan prefix
-		while (j < (int)ft_strlen(chars))
-		{
-			if (str[i] == chars[j])
-				found = 1;
-			j++;
-		}
-		if (!found)
+
+		if (!ft_strchr(chars, str[i]))
 			return (0);
 		i++;
-		found = 0;
 	}
 	return (1);
 }

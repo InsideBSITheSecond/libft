@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/10/10 18:35:34 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/10/16 15:31:49 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 # include <math.h>
 # include <stdlib.h>
 # include <unistd.h>
-
+# include "ft_printf.h"
+# include "get_next_line.h"
 typedef struct s_list
 {
 	void				*content;
@@ -148,5 +149,6 @@ int						get_a(int trgb);
 int						get_r(int trgb);
 int						get_g(int trgb);
 int						get_b(int trgb);
-int						ft_strcontainsonly(char *str, char *chars);
+int ft_strcontsowpref(char *str, char *chars, char prefix);
+int	ft_strcontsonly(char *str, char *chars);
 #endif
