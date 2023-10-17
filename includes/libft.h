@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/10/16 15:31:49 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:48:31 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 # include <math.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "ft_printf.h"
-# include "get_next_line.h"
 typedef struct s_list
 {
 	void				*content;
