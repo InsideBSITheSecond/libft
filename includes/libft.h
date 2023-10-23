@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/10/17 15:48:31 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:46:56 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <math.h>
 # include <stdlib.h>
 # include <unistd.h>
+
 typedef struct s_list
 {
 	void				*content;
@@ -147,6 +148,6 @@ int						get_a(int trgb);
 int						get_r(int trgb);
 int						get_g(int trgb);
 int						get_b(int trgb);
-int ft_strcontsowpref(char *str, char *chars, char prefix);
-int	ft_strcontsonly(char *str, char *chars);
+int						ft_strcontsowpref(char *str, char *chars, char prefix);
+int						ft_strcontsonly(char *str, char *chars);
 #endif

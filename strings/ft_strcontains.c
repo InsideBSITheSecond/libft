@@ -12,7 +12,7 @@
 
 #include "../includes/libft.h"
 
-int ft_strcontsowpref(char *str, char *chars, char prefix)
+int	ft_strcontsowpref(char *str, char *chars, char prefix)
 {
 	if (!str || !chars || !prefix)
 		return (-1);
@@ -30,7 +30,6 @@ int	ft_strcontsonly(char *str, char *chars)
 	i = 0;
 	while (i < (int)ft_strlen(str))
 	{
-
 		if (!ft_strchr(chars, str[i]))
 			return (0);
 		i++;
