@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/10/19 18:46:56 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/10/24 08:59:51 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,4 +150,5 @@ int						get_g(int trgb);
 int						get_b(int trgb);
 int						ft_strcontsowpref(char *str, char *chars, char prefix);
 int						ft_strcontsonly(char *str, char *chars);
+void					ft_putnbr_base(int nbr, char *base);
 #endif
