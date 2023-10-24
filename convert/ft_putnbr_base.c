@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putnbr_base.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 23:37:00 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/10/07 17:48:15 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/10/24 09:03:45 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/pushswap.h"
+#include "../includes/libft.h"
 
 int	check_base(char *base)
 {
@@ -52,7 +52,7 @@ void	ft_putnbr_base(int nbr, char *base)
 		if (nbr < 0)
 		{
 			nbr = -nbr;
-			ft_putchar('-');
+			ft_putchar_fd('-', 1);
 		}
 		while (base[size_base])
 			size_base++;
@@ -63,6 +63,6 @@ void	ft_putnbr_base(int nbr, char *base)
 			i++;
 		}
 		while (--i >= 0)
-			ft_putchar(base[nbr_final[i]]);
+			ft_putchar_fd(base[nbr_final[i]], 1);
 	}
 }
