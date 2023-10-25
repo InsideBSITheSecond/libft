@@ -6,7 +6,7 @@
 #    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/10/24 08:59:08 by llegrand         ###   ########.fr        #
+#    Updated: 2023/10/25 16:18:06 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ CMP			= compare/
 SRCS_CMP	= $(CMP)ft_isalpha.c $(CMP)ft_isdigit.c $(CMP)ft_isalnum.c $(CMP)ft_isascii.c $(CMP)ft_isprint.c
 
 CNV			= convert/
-SRCS_CNV 	= $(CNV)ft_dtoa.c $(CNV)ft_atoi.c $(CNV)ft_itoa.c $(CNV)ft_toupper.c $(CNV)ft_tolower.c $(CNV)ft_putnbr_base.c
+SRCS_CNV 	= $(CNV)ft_atol.c $(CNV)ft_dtoa.c $(CNV)ft_atoi.c $(CNV)ft_itoa.c $(CNV)ft_toupper.c $(CNV)ft_tolower.c $(CNV)ft_putnbr_base.c
 
 FD			= fd/
 SRCS_FD		= $(FD)ft_putchar_fd.c $(FD)ft_putstr_fd.c $(FD)ft_putendl_fd.c $(FD)ft_putnbr_fd.c

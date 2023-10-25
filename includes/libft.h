@@ -6,7 +6,7 @@
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/10/24 08:59:51 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:18:31 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,4 +151,5 @@ int						get_b(int trgb);
 int						ft_strcontsowpref(char *str, char *chars, char prefix);
 int						ft_strcontsonly(char *str, char *chars);
 void					ft_putnbr_base(int nbr, char *base);
+long					ft_atol(const char *str);
 #endif
