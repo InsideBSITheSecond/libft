@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cdllsize.c                                      :+:      :+:    :+:   */
+/*   ft_clamp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 15:14:35 by llegrand          #+#    #+#             */
-/*   Updated: 2023/09/28 15:14:35 by llegrand         ###   ########.fr       */
+/*   Created: 2023/10/09 12:05:42 by llegrand          #+#    #+#             */
+/*   Updated: 2023/10/09 12:05:42 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_cdllsize(t_cdllist *tail)
+int	clamp(int value, int limitup, int limitdown)
 {
-	t_cdllist	*head;
-	int			size;
-
-	size = 1;
-	if (!tail)
-		return (-1);
-	head = tail->next;
-	while (head != tail)
-	{
-		head = head->next;
-		size++;
-	}
-	return (size);
+	if (value > limitup)
+		return (limitup);
+	if (value < limitdown)
+		return (limitdown);
+	return (value);
 }

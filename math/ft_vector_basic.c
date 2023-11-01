@@ -1,30 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cdllsize.c                                      :+:      :+:    :+:   */
+/*   vector_basics.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 15:14:35 by llegrand          #+#    #+#             */
-/*   Updated: 2023/09/28 15:14:35 by llegrand         ###   ########.fr       */
+/*   Created: 2023/07/19 15:35:42 by insidebsi         #+#    #+#             */
+/*   Updated: 2023/08/09 16:32:27 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_cdllsize(t_cdllist *tail)
+t_vec2d	create_vec2d(double x, double y)
 {
-	t_cdllist	*head;
-	int			size;
+	t_vec2d	new;
 
-	size = 1;
-	if (!tail)
-		return (-1);
-	head = tail->next;
-	while (head != tail)
-	{
-		head = head->next;
-		size++;
-	}
-	return (size);
+	new.x = x;
+	new.y = y;
+	return (new);
+}
+
+t_vec2d	add_vec2d(t_vec2d a, t_vec2d b)
+{
+	t_vec2d	added;
+
+	added.x = a.x + b.x;
+	added.y = a.y + b.y;
+	return (added);
+}
+
+t_vec2d	sub_vec2d(t_vec2d a, t_vec2d b)
+{
+	t_vec2d	sub;
+
+	sub.x = a.x - b.x;
+	sub.y = a.y - b.y;
+	return (sub);
+}
+
+void	real_const_vec2d(t_vec2d *a, double c)
+{
+	(*a).x *= c;
+	(*a).y *= c;
 }

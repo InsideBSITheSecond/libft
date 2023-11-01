@@ -2,19 +2,21 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_cdlladd.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2023/09/18 16:17:52 by llegrand          #+#    #+#             */
 /*   Updated: 2023/09/18 16:17:52 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include <stdio.h>
 
 void	ft_cdlladd_front(t_cdllist *tail, t_cdllist *new)
-{ 
+{
 	if (!tail || !new)
 		return ;
 	tail->next->prev = new;
@@ -30,8 +32,3 @@ void	ft_cdlladd_back(t_cdllist **tail, t_cdllist *new)
 	ft_cdlladd_front(*tail, new);
 	*tail = new;
 }
-
-// int	ft_cdlladdu_front(t_cdllist *tail, t_cdllist *new)
-// {
-
-// }

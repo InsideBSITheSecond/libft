@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cdllsize.c                                      :+:      :+:    :+:   */
+/*   colors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 15:14:35 by llegrand          #+#    #+#             */
-/*   Updated: 2023/09/28 15:14:35 by llegrand         ###   ########.fr       */
+/*   Created: 2023/10/09 12:31:37 by llegrand          #+#    #+#             */
+/*   Updated: 2023/10/09 12:31:37 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-int	ft_cdllsize(t_cdllist *tail)
+int	create_argb(int a, int r, int g, int b)
 {
-	t_cdllist	*head;
-	int			size;
+	return (a << 24 | r << 16 | g << 8 | b);
+}
 
-	size = 1;
-	if (!tail)
-		return (-1);
-	head = tail->next;
-	while (head != tail)
-	{
-		head = head->next;
-		size++;
-	}
-	return (size);
+int	get_a(int trgb)
+{
+	return ((trgb >> 24) & 0xFF);
+}
+
+int	get_r(int trgb)
+{
+	return ((trgb >> 16) & 0xFF);
+}
+
+int	get_g(int trgb)
+{
+	return ((trgb >> 8) & 0xFF);
+}
+
+int	get_b(int trgb)
+{
+	return (trgb & 0xFF);
 }
