@@ -1,5 +1,3 @@
 *.o
-.DS_Store
 *.a
-.vscode
-*.code-workspace
+.DS_Store
