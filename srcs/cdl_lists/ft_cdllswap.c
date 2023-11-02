@@ -12,17 +12,19 @@
 
 #include "../includes/libft.h"
 
-void	ft_cdllswap(t_cdllist *tail)
+void	ft_cdllswap(t_cdllist **tail)
 {
 	t_cdllist	*head;
 
 	if (!tail)
 		return ;
-	head = tail->next;
-	tail->next = head->next;
+	if (ft_cdllsize(*tail) == 2)
+		*tail = (*tail)->next;
+	head = (*tail)->next;
+	(*tail)->next = head->next;
 	head->next->next->prev = head;
 	head->prev = head->next;
 	head->next = head->next->next;
-	tail->next->next = head;
-	tail->next->prev = tail;
+	(*tail)->next->next = head;
+	(*tail)->next->prev = *tail;
 }
