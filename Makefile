@@ -6,7 +6,7 @@
 #    By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/11/01 23:22:14 by insidebsi        ###   ########.fr        #
+#    Updated: 2023/11/02 01:47:12 by insidebsi        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,18 +57,21 @@ SRCS_COLORS	= $(COLORS)ft_colors.c
 
 SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL) $(SRCS_GNL) $(SRCS_MATH) $(SRCS_LINMAP) $(SRCS_COLORS)
 
-OBJS := $(SRCS:.c=.o)
+OBJS=$(addprefix build/, $(notdir $(SRCS:.c=.o)))
 
 NAME := libft.a
 
 $(NAME) : $(OBJS)
 	$(AR) $(ARARGS) $(NAME) $(OBJS)
 
-%.o : %.c
-	$(CC) $(CCARGS) $< -o ${<:.c=.o}
+build/ :
+	mkdir build
+
+build/%.o : srcs/*/%.c build/
+	$(CC) $(CCARGS) $< -o $(addprefix build/, $(notdir $(<:.c=.o)))
 
 clean :
-	rm -f $(OBJS) $(BOBJS) debug.out a.out
+	rm -f $(OBJS) debug.out a.out
 
 fclean : clean
 	rm -f $(NAME)

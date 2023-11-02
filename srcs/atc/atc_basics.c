@@ -1,7 +1,7 @@
 
-#include "../includes/atc.h"
-#include "../includes/ft_printf.h"
-#include "../includes/libft.h"
+#include "../../includes/atc.h"
+#include "../../includes/ft_printf.h"
+#include "../../includes/libft.h"
 
 void	atc_clear(int fd)
 {
