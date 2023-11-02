@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
+/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 19:12:07 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/11/01 23:16:48 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/11/02 17:12:18 by llegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 
 int	main()
 {
-	int		tty = 0;
-	char	*filename = ft_strformat("/dev/pts/%i", tty);
+	int		tty = 2;
+	//char	*filename = ft_strformat("/dev/pts/%i", tty); linux
+	char	*filename = ft_strformat("/dev/ttys00%i", tty); //osx
 	int		fd = open(filename, O_WRONLY);
 	
 	char *str = ft_strformat("%shello world\n%s", ATC_RED, ATC_NRM);

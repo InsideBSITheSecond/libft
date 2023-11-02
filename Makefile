@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+         #
+#    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/11/02 02:09:18 by insidebsi        ###   ########.fr        #
+#    Updated: 2023/11/02 17:09:26 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CL			= srcs/linked_lists/
 SRCS_CL 	= $(CL)ft_lstnew.c $(CL)ft_lstdelone.c $(CL)ft_lstadd_front.c $(CL)ft_lstsize.c $(CL)ft_lstlast.c $(CL)ft_lstadd_back.c $(CL)ft_lstclear.c $(CL)ft_lstiter.c $(CL)ft_lstmap.c
 
 CMP			= srcs/compare/
-SRCS_CMP	= $(CMP)ft_isalpha.c $(CMP)ft_isdigit.c $(CMP)ft_isalnum.c $(CMP)ft_isascii.c $(CMP)ft_isprint.c
+SRCS_CMP	= $(CMP)ft_isalnum.c $(CMP)ft_isalpha.c $(CMP)ft_isascii.c $(CMP)ft_isdigit.c $(CMP)ft_isprint.c
 
 CNV			= srcs/convert/
 SRCS_CNV 	= $(CNV)ft_atol.c $(CNV)ft_dtoa.c $(CNV)ft_atoi.c $(CNV)ft_itoa.c $(CNV)ft_toupper.c $(CNV)ft_tolower.c $(CNV)ft_putnbr_base.c
@@ -55,7 +55,7 @@ SRCS_LINMAP = $(LINMAP)ft_linmap.c $(LINMAP)ft_mlinmap.c
 COLORS		= srcs/colors/
 SRCS_COLORS	= $(COLORS)ft_colors.c
 
-SRCS = $(SRCS_CL) $(SRCS_CMP) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL) $(SRCS_GNL) $(SRCS_MATH) $(SRCS_LINMAP) $(SRCS_COLORS)
+SRCS = $(SRCS_CMP) $(SRCS_CL) $(SRCS_CNV) $(SRCS_FD) $(SRCS_MEM) $(SRCS_STR) $(SRCS_PF) $(SRCS_SFORM) $(SRCS_CDLL) $(SRCS_GNL) $(SRCS_MATH) $(SRCS_LINMAP) $(SRCS_COLORS)
 
 OBJS=$(addprefix build/, $(notdir $(SRCS:.c=.o)))
 
@@ -67,13 +67,7 @@ $(NAME) : $(OBJS)
 build/ :
 	mkdir build
 
-#works for half the job
-#maybe look how % in targets works or idk
-build/%.o : srcs/*/%.c build/
-	$(CC) $(CCARGS) $< -o $(addprefix build/, $(notdir $(<:.c=.o)))
-
-#works for the other half
-$(addprefix build/, $(notdir $(%:.c=.o))) : srcs/*/%.c build/
+build/%.o : srcs/*/%.c | build
 	$(CC) $(CCARGS) $< -o $(addprefix build/, $(notdir $(<:.c=.o)))
 
 clean :
@@ -81,6 +75,7 @@ clean :
 
 fclean : clean
 	rm -f $(NAME)
+	rm -rf build
 
 all : $(NAME)
 
@@ -107,4 +102,4 @@ test :
 	gcc ${SRCS} -g -o a.out
 	./a.out ${arg}
 
-.PHONY : clean fclean all re
+.PHONY : clean fclean all re build/
