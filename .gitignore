@@ -3,3 +3,5 @@ build/
 *.out
 *.dSYM
 .DS_Store
+.vscode
+*.code-workspace
