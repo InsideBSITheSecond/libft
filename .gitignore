@@ -1,5 +1,5 @@
-*.o
+build/
 *.a
 *.out
-*.DSym
+*.dSYM
 .DS_Store
