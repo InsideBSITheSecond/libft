@@ -6,7 +6,7 @@
 #    By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/11/02 02:02:24 by insidebsi        ###   ########.fr        #
+#    Updated: 2023/11/02 02:09:18 by insidebsi        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ build/ :
 	mkdir build
 
 #works for half the job
+#maybe look how % in targets works or idk
 build/%.o : srcs/*/%.c build/
 	$(CC) $(CCARGS) $< -o $(addprefix build/, $(notdir $(<:.c=.o)))
 
