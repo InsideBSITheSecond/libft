@@ -6,12 +6,12 @@
 #    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/10/25 16:18:06 by llegrand         ###   ########.fr        #
+#    Updated: 2023/11/02 18:12:35 by llegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := cc
-CCARGS := -Wall -Werror -Wextra -I ./includes -c -g3
+CCARGS := -Wall -Werror -Wextra -I ./includes -c -o3
 
 AR := ar
 ARARGS := -crs
