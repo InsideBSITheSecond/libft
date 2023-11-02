@@ -27,7 +27,7 @@ char	*join_free2(char *memory, char *new_content)
 
 	tmp = ft_strjoin(memory, new_content);
 	free(memory);
-	free(new_content);
+	//free(new_content); was only used for passing allocated shit from fractol
 	return (tmp);
 }
 

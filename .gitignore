@@ -1,6 +1,7 @@
-*.o
-.DS_Store
+build/
 *.a
+*.out
+*.dSYM
+.DS_Store
 .vscode
 *.code-workspace
-a.out
