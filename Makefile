@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+         #
+#    By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 14:22:16 by llegrand          #+#    #+#              #
-#    Updated: 2023/11/02 18:12:35 by llegrand         ###   ########.fr        #
+#    Updated: 2023/11/02 23:34:51 by insidebsi        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,13 +61,13 @@ OBJS=$(addprefix build/, $(notdir $(SRCS:.c=.o)))
 
 NAME := libft.a
 
-$(NAME) : $(OBJS)
+$(NAME) : build $(OBJS)
 	$(AR) $(ARARGS) $(NAME) $(OBJS)
 
-build/ :
+build :
 	mkdir build
 
-build/%.o : srcs/*/%.c | build
+build/%.o : srcs/*/%.c #| build
 	$(CC) $(CCARGS) $< -o $(addprefix build/, $(notdir $(<:.c=.o)))
 
 clean :

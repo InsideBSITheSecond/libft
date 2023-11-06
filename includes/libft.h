@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llegrand <llegrand@student.42.fr>          +#+  +:+       +#+        */
+/*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:19:57 by llegrand          #+#    #+#             */
-/*   Updated: 2023/10/25 16:18:31 by llegrand         ###   ########.fr       */
+/*   Updated: 2023/11/02 20:39:22 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ t_cdllist				*ft_cdllfind(t_cdllist *tail, void *data);
 int						ft_cdllsize(t_cdllist *tail);
 void					ft_cdlldelone(t_cdllist *node, void (*del)(void *));
 void					ft_cdlldrop(t_cdllist **tail, void (*del)(void *));
-void					ft_cdllswap(t_cdllist *tail);
+void					ft_cdllswap(t_cdllist **tail);
 double					linmap(double val, t_vec2d range1, t_vec2d range2);
 double					mappedlmap(const t_mpmapping *mapping, double input,
 							t_vec2d baserange);

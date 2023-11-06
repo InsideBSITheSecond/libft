@@ -6,15 +6,15 @@
 /*   By: insidebsi <insidebsi@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 19:06:20 by insidebsi         #+#    #+#             */
-/*   Updated: 2023/11/01 22:38:42 by insidebsi        ###   ########.fr       */
+/*   Updated: 2023/11/03 00:57:49 by insidebsi        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <sys/ioctl.h>
-
 #ifndef ATC_H
 # define ATC_H
+
+# include <fcntl.h>
+# include <sys/ioctl.h>
 
 # define ATC_NRM "\x1B[0m"
 # define ATC_BLK "\x1B[1;30m"
